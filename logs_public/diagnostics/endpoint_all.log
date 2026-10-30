@@ -1,0 +1,12 @@
+endpoint values.  Predictions if the mechanism is right: the three log-differences are lambda-independent.
+  lam    N   log eps    log(v_xi/pk)  log(v_k/pk)  .5log(1-chi4)   D1=log(v_xi/pk)-.5log(1-chi4)   D2=log(v_xi/v_k)   D3=log eps-2log(v_xi/pk)
+   2.0   60  -27.83828    -12.98545     -12.8092    -14.84909        1.8636                     -0.17625            -1.8674
+        v_xi/pk from N terms = 2.29346e-6,  from N/2 terms = 3.18686e-6   (agreement gauges truncation error of the endpoint value);  sign(v_xi)=+, sign(v_k)=-
+   2.5   60  -53.53925    -25.72142    -25.60314    -27.91575        2.1943                     -0.11828            -2.0964
+        v_xi/pk from N terms = 6.75036e-12,  from N/2 terms = 4.51782e-12   (agreement gauges truncation error of the endpoint value);  sign(v_xi)=+, sign(v_k)=+
+   3.0   60  -86.17004    -41.89173    -41.90979    -44.34002        2.4483                     0.018062            -2.3866
+        v_xi/pk from N terms = 6.40696e-19,  from N/2 terms = 1.32508e-18   (agreement gauges truncation error of the endpoint value);  sign(v_xi)=+, sign(v_k)=+
+   3.5   80  -125.4684    -61.37549    -61.47049    -64.04678        2.6713                     0.094994            -2.7174
+        v_xi/pk from N terms = 2.2129e-27,  from N/2 terms = 4.85026e-24   (agreement gauges truncation error of the endpoint value);  sign(v_xi)=+, sign(v_k)=+
+   4.2  100  -191.1084    -94.02395    -94.24691    -97.07618        3.0522                      0.22296            -3.0605
+        v_xi/pk from N terms = 1.46526e-41,  from N/2 terms = 5.07916e-29   (agreement gauges truncation error of the endpoint value);  sign(v_xi)=+, sign(v_k)=+
