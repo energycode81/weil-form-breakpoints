@@ -1,0 +1,13 @@
+lambda = 2.0, L = 1.3862944, 50 digits, breakpoint basis
+
+[d = 48]  breakpoints: ['0.0', '0.28768', '0.69315', '1.0986', '1.3863']
+    y-segment 0/6  [227s]
+    y-segment 5/6  [774s]
+    matrix built (98x98, 4 pieces, degree 48) [775s]
+    eps_d = 7.51869904817918324e-13   next = 1.5362383e-7   log eps_d = -27.9162130848
+    endpoint/peak = 1.1445825e-6  (log -13.680471)
+    |coeff| of top two degrees per piece: (4.1e-10,5.8e-10)  (7.3e-10,5.8e-10)  (7.3e-10,5.8e-10)  (4.1e-10,5.8e-10)
+    eigenvector written to bp_lam2_d48_v2.json
+
+summary:   d    dim   eps_d                  log eps_d     log(v/peak)
+         48     98   7.51869904817918e-13   -27.91621308   -13.680471
