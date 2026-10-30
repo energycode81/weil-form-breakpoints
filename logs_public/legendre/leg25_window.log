@@ -1,0 +1,22 @@
+lambda=2.5, M=120, K0=60, shift=+0.000, window +-0.02
+prime-power positions:
+    L-log 5  0.2231   max|resid| = 6.245e-13
+    L-log 4  0.4463   max|resid| = 9.116e-13
+      log 2  0.6931   max|resid| = 1.333e-12
+    L-log 3  0.7340   max|resid| = 1.468e-12
+      log 3  1.0986   max|resid| = 1.468e-12
+    L-log 2  1.1394   max|resid| = 1.333e-12
+      log 4  1.3863   max|resid| = 9.116e-13
+      log 5  1.6094   max|resid| = 6.245e-13
+midpoint controls:
+        mid  0.3347   max|resid| = 8.912e-13
+        mid  0.5697   max|resid| = 9.479e-13
+        mid  0.7136   max|resid| = 1.391e-12
+        mid  0.9163   max|resid| = 2.378e-12
+        mid  1.1190   max|resid| = 1.391e-12
+        mid  1.2629   max|resid| = 9.479e-13
+        mid  1.4979   max|resid| = 8.912e-13
+endpoint windows:
+        end  0.0200   max|resid| = 2.726e-12
+        end  1.8126   max|resid| = 1.296e-12
+full residual written to leg25_M120_resid_K60.csv

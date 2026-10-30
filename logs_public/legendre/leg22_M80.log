@@ -1,0 +1,18 @@
+lambda = 2.2, L = 1.5769147, 60 digits, even Legendre basis
+
+[M = 80]  even degrees 0..80, matrix 41x41
+    prime powers: [2, 3, 4]
+    y-node 0/480  [1s]
+    y-node 120/480  [44s]
+    y-node 240/480  [88s]
+    y-node 360/480  [131s]
+    matrix built (41x41) [176s]
+    eps_M = 5.8890375363865374282e-17   next = 2.554366756e-11   gap/eps = 4.3375e+5
+    log eps_M = -37.370854003
+    Legendre coefficients |c_k| of the minimizer, k = 0, 2, 4, ...:
+      0.667  0.611  0.383  0.179  0.0595  0.0122  0.000425  0.000673  0.000267  6.33e-5  1.47e-5  5.01e-6  2.04e-6  7.8e-7  2.66e-7  7.27e-8  8.21e-9  6.6e-9  5.94e-9  3.26e-9  1.47e-9  5.6e-10  2.35e-10  8.47e-10  9.83e-10  4.66e-10  8.54e-11  9.4e-11  1.66e-10  1.56e-10  3.58e-10  2.26e-10  4.46e-12  5.7e-12  1.1e-10  3.11e-10  4.15e-10  2.41e-10  1.1e-10  2.39e-12  9.69e-11
+    endpoint xi(0) = 2.2899099e-8,  xi(L/2) = 1.6424238,  v/peak = 1.394226e-8  (log = -18.088341)
+    check Q(cos 2pi y/L): Legendre 0.124639811945036  vs Fourier (L/2)(a1+b1) = 0.124639811945036   (projection captures 1.0 of the norm)
+
+summary:  M    eps_M                    log eps_M      log(v/peak)
+         80     5.88903753638654e-17     -37.370854   -18.088341
