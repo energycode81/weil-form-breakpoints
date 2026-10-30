@@ -1,0 +1,48 @@
+explicit-formula check: lambda=3.5, N=80, eps_N=3.234263749e-55
+  Parseval (1/2pi) int_-200^200 |xi_hat|^2 = 1.0   (||xi||^2 = 1; tail beyond 200 missing)
+
+  computing 3000 zeros at 39 digits (floor |xi_hat|^2 ~ 1e-78 must be << eps), evaluating xi_hat at 45 digits ...
+  zeros done [528s]
+
+  partial sums, counting each zero pair rho, rho-bar:   2 S_M = 2 sum_{k<=M} |xi_hat(t_k)|^2
+     M       t_M        2 S_M / eps_N
+       1   14.134725   3.3258997e-29
+       2    21.02204   3.3269622e-29
+       3   25.010858   3.3269817e-29
+       5   32.935062   3.3269817e-29
+      10   49.773832   3.3269924e-29
+      20    77.14484   3.3450505e-22
+      50   143.11185    0.0103351
+     100   236.52423   0.59897325
+     200   396.38185   0.73985282
+     300   541.84744   0.84069825
+     500   811.18436   0.87523005
+    1000   1419.4225   0.94942647
+    1500     1980.91   0.95162108
+    2000   2515.2865   0.95264648
+    3000   3533.3282   0.95790189
+    3000   3533.3282   0.95790189
+
+  contribution to eps by frequency window (2 x sum over zeros in window):
+     t in [    0,   30)      3 zeros   3.32698e-29 of eps   mean|xi_hat|^2 = 1.793e-84
+     t in [   30,   50)      7 zeros   1.07519e-34 of eps   mean|xi_hat|^2 = 2.484e-90
+     t in [   50,   77)      9 zeros   4.79592e-23 of eps   mean|xi_hat|^2 = 8.617e-79
+     t in [   77,  110)     14 zeros   1.89769e-11 of eps   mean|xi_hat|^2 = 2.192e-67
+     t in [  110,  150)     19 zeros    0.0295969 of eps   mean|xi_hat|^2 = 2.519e-58
+     t in [  150,  200)     27 zeros     0.481156 of eps   mean|xi_hat|^2 = 2.882e-57
+     t in [  200,  300)     59 zeros     0.168739 of eps   mean|xi_hat|^2 = 4.625e-58
+     t in [  300,  400)     64 zeros     0.064335 of eps   mean|xi_hat|^2 = 1.626e-58
+     t in [  400,  600)    139 zeros    0.0981274 of eps   mean|xi_hat|^2 = 1.142e-58
+     t in [  600,  800)    150 zeros    0.0301969 of eps   mean|xi_hat|^2 = 3.255e-59
+     t in [  800, 1200)    322 zeros    0.0686876 of eps   mean|xi_hat|^2 = 3.45e-59
+     t in [ 1200, 1600)    344 zeros    0.0104193 of eps   mean|xi_hat|^2 = 4.898e-60
+     t in [ 1600, 2400)    733 zeros   0.00100835 of eps   mean|xi_hat|^2 = 2.225e-61
+     t in [ 2400, 3200)    776 zeros   0.00372483 of eps   mean|xi_hat|^2 = 7.762e-61
+     t in [ 3200, 3533)    334 zeros   0.00191045 of eps   mean|xi_hat|^2 = 9.25e-61
+
+  tail fit gave <|xi_hat|^2> ~ 2.498e-72 t^(--3.31): exponent too small for a convergent tail; fit is unreliable (noise or not yet in the 1/t^2 regime).  Using p=2 with the same last-window amplitude as a rough estimate.
+
+  tail beyond t_M = 3533.3:  window means fit  <|xi_hat|^2> ~ 1.100e-53 t^(-2.00);  2 x integral against zero density = 0.022435 of eps
+  endpoint value implied by the tail (jump picture, 2 v^2 = A):  v = 2.3447e-27  (divide by the peak value xi(1) to compare with --endpoint)
+
+  2 S_M + tail = 0.98033684 eps_N      (deviation from 1: -0.01966)

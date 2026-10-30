@@ -1,0 +1,30 @@
+lambda = 3.0,  L = 2 log lambda = 2.197224577,  N = 40,  60 digits
+prime powers <= lambda^2 = 9.0: [2, 3, 4, 5, 7]   [ABLATION: primes removed/truncated - not the Weil form]
+matrix size (2N+1)x(2N+1) = 81x81
+
+[check] W02 against closed form (4.2):
+    (n,m)=(0,0)  closed=4.85460920868  quad=4.85460920868  diff=0.0
+    (n,m)=(1,0)  closed=0.144014077646  quad=0.144014077646  diff=1.94e-62
+    (n,m)=(2,1)  closed=-0.0703684927749  quad=-0.0703684927749  diff=-9.72e-63
+
+[A] building tau ...
+    coefficients n=  0   a=   0.067128749  b=           0.0   [0s]
+    coefficients n=  5   a=     2.2526183  b=    0.20286452   [2s]
+    coefficients n= 10   a=    0.66480612  b=    0.51579817   [5s]
+    coefficients n= 15   a=     2.5317675  b=    0.33943552   [10s]
+    coefficients n= 20   a=     2.2723904  b=  -0.085311776   [16s]
+    coefficients n= 25   a=     2.5604995  b=     0.4371761   [24s]
+    coefficients n= 30   a=     2.1760598  b=    0.10708136   [33s]
+    coefficients n= 35   a=     2.6142894  b=    0.17011089   [43s]
+    coefficients n= 40   a=     3.0075613  b=    0.58221451   [55s]
+
+[B] diagonalising ...
+    eps_N   (lowest eigenvalue)  = -0.13773807564698709276
+    next eigenvalue              = -0.032468781809388686112
+    gap                          = 0.1052692938
+    log eps_N                    = n/a (eps_N <= 0)
+    norm of odd part of xi       = 1.0
+    eigenvector noise floor ~ 10^-dps/gap = 9.5e-60;  expected endpoint value ~ 4.7e-22 relative;  digits needed to resolve it: ~30
+    coefficient decay |xi_k| (k = 0, 1, 2, ...):
+      1.42e-61  0.06581  0.1287  0.1862  0.2397  0.004926  0.2585  0.2205  0.3649  0.1157  0.1653  0.1259  0.2659  0.05857  0.04989  0.006478  0.007611  0.004132  0.01953  0.03431  0.01895  0.003243  0.01993  0.004536  0.006929  0.007761  0.01989  0.01647  0.02382  0.0006058  0.01241  0.01008  0.002472  0.002585  0.01127  0.008543  0.007841  0.008572  0.0274  0.002303  0.002033
+    eigenvalues (lowest 6): -0.13773808, -0.032468782, -0.00091767642, -2.7174782e-7, -9.2619826e-15, -1.1306256e-17

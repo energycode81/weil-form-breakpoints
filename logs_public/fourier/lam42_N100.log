@@ -1,0 +1,65 @@
+lambda = 4.2,  L = 2 log lambda = 2.870169051,  N = 100,  140 digits
+prime powers <= lambda^2 = 17.64: [2, 3, 4, 5, 7, 8, 9, 11, 13, 16, 17]
+matrix size (2N+1)x(2N+1) = 201x201
+
+[check] W02 against closed form (4.2):
+    (n,m)=(0,0)  closed=6.79568400364  quad=6.79568400364  diff=-1.05e-140
+    (n,m)=(1,0)  closed=0.336933161677  quad=0.336933161677  diff=6.56e-142
+    (n,m)=(2,1)  closed=-0.16196014854  quad=-0.16196014854  diff=-3.28e-142
+
+[A] building tau ...
+    coefficients n=  0   a=   0.039304188  b=           0.0   [0s]
+    coefficients n=  5   a=    0.17489178  b=    0.31658064   [8s]
+    coefficients n= 10   a=     1.8420322  b=    -0.4122786   [22s]
+    coefficients n= 15   a=     2.9674071  b=    0.23498021   [41s]
+    coefficients n= 20   a=     2.6748208  b=   -0.43137392   [66s]
+    coefficients n= 25   a=    0.44363662  b=    0.24635678   [96s]
+    coefficients n= 30   a=     3.0055119  b=   0.064943251   [132s]
+    coefficients n= 35   a=      4.108144  b=     0.2539589   [175s]
+    coefficients n= 40   a=     3.9276665  b=    0.44589141   [224s]
+    coefficients n= 45   a=     3.0299619  b=    0.64236142   [279s]
+    coefficients n= 50   a=    0.53387195  b=    0.46766866   [340s]
+    coefficients n= 55   a=     1.9319215  b=    0.83707506   [405s]
+    coefficients n= 60   a=      3.161626  b= -0.0026424174   [477s]
+    coefficients n= 65   a=     3.0575591  b=    0.60318286   [553s]
+    coefficients n= 70   a=     3.2488677  b=   0.060415727   [633s]
+    coefficients n= 75   a=     2.1713532  b=    0.18866548   [720s]
+    coefficients n= 80   a=     3.8757272  b=    0.15124117   [813s]
+    coefficients n= 85   a=     4.7573856  b=   -0.25560211   [911s]
+    coefficients n= 90   a=      4.613157  b=     0.3691455   [1013s]
+    coefficients n= 95   a=     3.5228103  b=    0.21308919   [1125s]
+    coefficients n=100   a=     3.2856961  b=    0.40817916   [1238s]
+
+[B] diagonalizing ...
+    eps_N   (lowest eigenvalue)  = 1.0061666143014848496e-83
+    next eigenvalue              = 1.7871625050741567671e-79
+    gap                          = 1.787061888e-79
+    log eps_N                    = -191.10841504
+    norm of odd part of xi       = 8.8114e-63
+    eigenvector noise floor ~ 10^-dps/gap = 5.6e-62;  expected endpoint value ~ 5.7e-45 relative;  digits needed to resolve it: ~130
+    coefficient decay |xi_k| (k = 0, 1, 2, ...):
+      0.5127  0.4613  0.3342  0.1913  0.08284  0.02437  0.003004  0.001059  0.0006033  9.133e-5  1.352e-5  3.782e-6  1.525e-6  5.166e-7  1.309e-8  1.492e-9  7.654e-9  4.72e-10  2.742e-10  3.176e-11  8.4e-12  7.903e-12  1.243e-13  1.238e-13  3.323e-14  2.518e-14  2.215e-15  2.031e-16  1.402e-16  1.502e-16  9.642e-18  3.411e-18  7.943e-19  1.053e-19  1.618e-19  8.604e-21  4.579e-21  4.796e-21  2.214e-22  1.339e-22  6.992e-24  2.416e-23  4.822e-24  6.711e-25  2.3e-25  8.24e-26  4.312e-26  1.316e-26  1.494e-27  2.393e-28  1.186e-27  2.056e-29  3.25e-29  5.729e-30  6.935e-30  2.809e-30  2.191e-31  2.36e-31  1.236e-31  2.038e-32  4.665e-33  2.477e-34  3.875e-33  2.893e-34  9.134e-35  1.167e-34  1.106e-34  1.303e-35  1.096e-35  4.19e-37  7.992e-37  9.791e-37  5.582e-39  1.604e-37  6.942e-38  5.413e-38  1.04e-38  3.244e-39  5.357e-39  1.784e-39  3.692e-40  4.015e-40  1.369e-40  1.528e-40  9.836e-41  1.439e-41  3.387e-41  2.857e-41  3.023e-42  3.385e-42  5.219e-43  6.216e-42  3.195e-43  6.525e-43  4.88e-43  5.303e-44  5.875e-43  3.802e-43  1.812e-43  2.436e-43  2.673e-43
+    eigenvalues (lowest 6): 1.0061666e-83, 1.7871625e-79, 1.6194083e-75, 1.0406966e-71, 5.2178429e-68, 1.9177634e-64
+    eigenvector written to xi_lam42_N100.json
+
+[D] prolate guess k_lambda = E(h_lambda):
+    c = 2 pi lambda^2 = 110.83539,  Legendre terms = 150,  working digits = 140,  chi_0 = 110.0836777, chi_4 = 986.6481698   [32s]
+    cosine similarity <xi,k>/|xi||k| = 0.99999999962980951001   [64s]
+    1 - |cos|                    = 3.7019e-10
+    Rayleigh quotient Q(k)/|k|^2 = 1.19391079804e-83   (eps_N = 1.00617e-83,  ratio = 1.1865935)   [236s]
+    fraction of |k|^2 outside span(V_n,|n|<=N) = 5.8208e-20
+    Q(k_hat - xi) (unit vectors)  = 1.8774418e-84
+    values at a few u (xi normalized so that xi(lambda)=1, k likewise):
+      u=0.238095   xi=             1.0   k=     1.006591781
+      u= 0.48795   xi= 7.151999381e+37   k= 9.006597556e+37
+      u=     1.0   xi= 6.824711849e+40   k= 8.585512389e+40
+      u= 2.04939   xi= 7.151999381e+37   k= 9.006597556e+37
+      u=     4.2   xi=             1.0   k=             1.0
+
+[E] eps_N versus 1 - chi_4(lambda)   (Figure 4 of the paper):
+    1 - chi_4(lambda)            = 4.79407547613929e-85
+    log(1 - chi_4)               = -194.152352025
+    Fuchs exponent -4 pi lam^2 + 9 log lam = -208.75501691   (slope reference only)
+    log eps_N                    = -191.10841504
+    log eps_N - log(1-chi_4)     = 3.04393698477
+    eps_N / (1 - chi_4)          = 20.9877090861

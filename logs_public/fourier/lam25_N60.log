@@ -1,0 +1,35 @@
+lambda = 2.5,  L = 2 log lambda = 1.832581464,  N = 60,  70 digits
+prime powers <= lambda^2 = 6.25: [2, 3, 4, 5]
+matrix size (2N+1)x(2N+1) = 121x121
+
+[check] W02 against closed form (4.2):
+    (n,m)=(0,0)  closed=3.92888400457  quad=3.92888400457  diff=-3.62e-71
+    (n,m)=(1,0)  closed=0.0818157180048  quad=0.0818157180048  diff=0.0
+    (n,m)=(2,1)  closed=-0.0402588182854  quad=-0.0402588182854  diff=5.66e-73
+
+[A] building tau ...
+    coefficients n=  0   a=   0.039182293  b=           0.0   [0s]
+    coefficients n=  5   a=     0.1221352  b=    0.19861793   [2s]
+    coefficients n= 10   a=     1.1849281  b=   -0.17043364   [6s]
+    coefficients n= 15   a=     1.8918869  b=     0.4001051   [11s]
+    coefficients n= 20   a=     2.4875943  b=    0.16831446   [18s]
+    coefficients n= 25   a=     2.3807075  b=    0.15848129   [27s]
+    coefficients n= 30   a=     2.7972044  b=    0.44497433   [37s]
+    coefficients n= 35   a=     2.5795976  b=    0.17266741   [49s]
+    coefficients n= 40   a=     2.0492712  b=    0.61577355   [62s]
+    coefficients n= 45   a=     2.1043629  b=    0.24125101   [77s]
+    coefficients n= 50   a=     2.0622355  b=  -0.082382846   [93s]
+    coefficients n= 55   a=     2.8924079  b=    0.21675881   [112s]
+    coefficients n= 60   a=     3.3886888  b=  -0.077893791   [132s]
+
+[B] diagonalizing ...
+    eps_N   (lowest eigenvalue)  = 5.6001204490945221146e-24
+    next eigenvalue              = 8.3973999992885654622e-21
+    gap                          = 8.391799879e-21
+    log eps_N                    = -53.5392541256
+    norm of odd part of xi       = 7.7927e-52
+    eigenvector noise floor ~ 10^-dps/gap = 1.19e-50;  expected endpoint value ~ 6.6e-15 relative;  digits needed to resolve it: ~42
+    coefficient decay |xi_k| (k = 0, 1, 2, ...):
+      0.6261  0.495  0.236  0.05735  0.001748  0.001715  5.826e-5  1.874e-5  7.357e-6  2.171e-7  1.627e-7  3.617e-9  9.841e-10  1.77e-9  1.268e-12  9.442e-11  4.036e-11  7.43e-12  3.813e-12  1.128e-14  7.868e-13  2.222e-13  6.518e-13  3.46e-14  2.154e-14  3.447e-13  2.722e-13  1.707e-13  7.518e-14  1.113e-13  8.431e-14  6.685e-15  8.685e-14  8.09e-14  1.154e-13  1.106e-13  8.786e-14  1.235e-13  9.998e-14  9.482e-14  2.28e-13  1.402e-13  1.977e-13  1.139e-13  7.711e-14  1.461e-13  6.766e-14  1.068e-13  1.268e-13  9.874e-14  1.192e-13  4.45e-14  5.016e-14  4.567e-14  4.862e-14  4.358e-14  6.012e-14  6.137e-14  2.046e-14  2.496e-14  4.378e-15
+    eigenvalues (lowest 6): 5.6001204e-24, 8.3974e-21, 7.6471956e-18, 5.1662048e-15, 2.6825202e-12, 5.8334454e-10
+    eigenvector written to xi_lam25_N60.json

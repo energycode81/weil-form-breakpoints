@@ -1,0 +1,30 @@
+lambda = 2.5,  L = 2 log lambda = 1.832581464,  N = 40,  40 digits
+prime powers <= lambda^2 = 6.25: []   [ABLATION: primes removed/truncated - not the Weil form]
+matrix size (2N+1)x(2N+1) = 81x81
+
+[check] W02 against closed form (4.2):
+    (n,m)=(0,0)  closed=3.92888400457  quad=3.92888400457  diff=-4.59e-41
+    (n,m)=(1,0)  closed=0.0818157180048  quad=0.0818157180048  diff=0.0
+    (n,m)=(2,1)  closed=-0.0402588182854  quad=-0.0402588182854  diff=0.0
+
+[A] building tau ...
+    coefficients n=  0   a=     1.5008325  b=           0.0   [0s]
+    coefficients n=  5   a=     1.0008241  b=    0.26373118   [1s]
+    coefficients n= 10   a=     1.6961375  b=    0.25686546   [2s]
+    coefficients n= 15   a=     2.1020037  b=    0.25457696   [4s]
+    coefficients n= 20   a=     2.3898262  b=    0.25343271   [7s]
+    coefficients n= 25   a=     2.6130347  b=    0.25274617   [10s]
+    coefficients n= 30   a=     2.7953916  b=    0.25228847   [13s]
+    coefficients n= 35   a=     2.9495635  b=    0.25196155   [17s]
+    coefficients n= 40   a=     3.0831087  b=    0.25171635   [22s]
+
+[B] diagonalising ...
+    eps_N   (lowest eigenvalue)  = -1.1457677414970267524
+    next eigenvalue              = -0.49706278950151760572
+    gap                          = 0.648704952
+    log eps_N                    = n/a (eps_N <= 0)
+    norm of odd part of xi       = 1.0
+    eigenvector noise floor ~ 10^-dps/gap = 1.54e-40;  expected endpoint value ~ 6.6e-15 relative;  digits needed to resolve it: ~22
+    coefficient decay |xi_k| (k = 0, 1, 2, ...):
+      3.809e-42  0.6618  0.1848  0.1048  0.07219  0.0546  0.04367  0.03623  0.03087  0.02683  0.02368  0.02115  0.01909  0.01738  0.01593  0.0147  0.01363  0.0127  0.01188  0.01115  0.0105  0.009925  0.009402  0.008929  0.008498  0.008104  0.007744  0.007412  0.007105  0.006822  0.006559  0.006314  0.006086  0.005873  0.005673  0.005486  0.00531  0.005144  0.004988  0.00484  0.0047
+    eigenvalues (lowest 6): -1.1457677, -0.49706279, -0.062404051, 0.15970391, 0.4031212, 0.54443592

@@ -1,0 +1,39 @@
+lambda = 3.5,  L = 2 log lambda = 2.505525937,  N = 80,  85 digits
+prime powers <= lambda^2 = 12.25: [2, 3, 4, 5, 7, 8, 9, 11]
+matrix size (2N+1)x(2N+1) = 161x161
+
+[check] W02 against closed form (4.2):
+    (n,m)=(0,0)  closed=5.7016828582  quad=5.7016828582  diff=-1.29e-85
+    (n,m)=(1,0)  closed=0.217997061916  quad=0.217997061916  diff=-4.02e-87
+    (n,m)=(2,1)  closed=-0.105780686226  quad=-0.105780686226  diff=1.01e-87
+
+[A] building tau ...
+    coefficients n=  0   a=   0.038858819  b=           0.0   [0s]
+    coefficients n=  5   a=    0.56247178  b=    0.45936973   [3s]
+    coefficients n= 10   a=     2.6383829  b=  -0.038876809   [7s]
+    coefficients n= 15   a=     2.6952833  b=    0.34238917   [14s]
+    coefficients n= 20   a=     2.5424155  b=  -0.058447592   [22s]
+    coefficients n= 25   a=    0.51108053  b=  0.0024049651   [32s]
+    coefficients n= 30   a=     2.6953485  b=    0.79718928   [44s]
+    coefficients n= 35   a=     3.9302588  b=    0.52017132   [60s]
+    coefficients n= 40   a=      2.384585  b=    0.58388522   [75s]
+    coefficients n= 45   a=     2.7350823  b=   0.021237549   [93s]
+    coefficients n= 50   a=     1.6200171  b=   -0.39628679   [112s]
+    coefficients n= 55   a=     3.0849148  b=    0.43848514   [134s]
+    coefficients n= 60   a=     4.7711299  b=    0.21536649   [157s]
+    coefficients n= 65   a=     3.0931657  b=    0.20490376   [182s]
+    coefficients n= 70   a=     3.7388433  b=    0.30670977   [208s]
+    coefficients n= 75   a=       2.92141  b=    0.14131881   [237s]
+    coefficients n= 80   a=     2.6262927  b=    0.94818538   [268s]
+
+[B] diagonalizing ...
+    eps_N   (lowest eigenvalue)  = 3.234263748748996853e-55
+    next eigenvalue              = 2.3384214705534553284e-51
+    gap                          = 2.338098044e-51
+    log eps_N                    = -125.468378802
+    norm of odd part of xi       = 3.494e-35
+    eigenvector noise floor ~ 10^-dps/gap = 4.28e-35;  expected endpoint value ~ 1.3e-30 relative;  digits needed to resolve it: ~88
+    coefficient decay |xi_k| (k = 0, 1, 2, ...):
+      0.5457  0.4765  0.3143  0.1512  0.0484  0.007325  0.001156  0.0007368  7.121e-5  1.808e-5  2.538e-7  1.61e-6  5.414e-8  1.022e-8  1.497e-8  6.396e-11  2.799e-10  5.03e-11  4.062e-11  1.735e-12  3.695e-13  1.055e-13  9.391e-14  1.571e-14  1.299e-15  2.197e-15  2.807e-17  4.051e-17  1.437e-17  5.717e-18  8.412e-19  2.113e-19  1.871e-19  9.096e-21  7.416e-21  1.088e-21  2.792e-21  1.781e-22  4.096e-23  7.714e-23  2.584e-23  7.076e-24  3.258e-25  1.391e-24  4.348e-25  1.574e-25  6.915e-26  5.554e-26  2.225e-26  4.667e-28  8.071e-27  1.48e-27  6.4e-28  5.259e-28  5.581e-28  1.088e-28  7.898e-29  5.54e-29  1.61e-28  7.377e-29  1.034e-29  2.692e-29  8.729e-29  4.547e-29  5.926e-29  2.207e-30  1.246e-29  4.287e-29  1.181e-28  2.167e-29  2.794e-29  3.908e-29  4.335e-29  3.133e-29  6.817e-30  3.454e-30  1.481e-29  2.29e-29  9.704e-30  3.572e-29  2.498e-29
+    eigenvalues (lowest 6): 3.2342637e-55, 2.3384215e-51, 9.6522903e-48, 3.1432451e-44, 7.4019749e-41, 1.1273112e-37
+    eigenvector written to xi_lam35_N80.json

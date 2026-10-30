@@ -1,0 +1,57 @@
+lambda = 2.0,  L = 2 log lambda = 1.386294361,  N = 8,  30 digits
+prime powers <= lambda^2 = 4.0: [2, 3, 4]
+matrix size (2N+1)x(2N+1) = 17x17
+
+[check] W02 against closed form (4.2):
+    (n,m)=(0,0)  closed=2.88539008178  quad=2.88539008178  diff=0.0
+    (n,m)=(1,0)  closed=0.0346930316015  quad=0.0346930316015  diff=0.0
+    (n,m)=(2,1)  closed=-0.0171886655166  quad=-0.0171886655166  diff=-3.08e-33
+
+[A] building tau ...
+    coefficients n=  0   a=   0.069704243  b=           0.0   [0s]
+    coefficients n=  5   a=     1.5162963  b=     0.2058035   [1s]
+
+[B] diagonalizing ...
+    eps_N   (lowest eigenvalue)  = 2.7538466573206905699e-12
+    next eigenvalue              = 1.3245637964493354889e-9
+    gap                          = 1.32180995e-9
+    log eps_N                    = -26.6180223972
+    norm of odd part of xi       = 7.3241e-23
+    eigenvector noise floor ~ 10^-dps/gap = 7.57e-22;  expected endpoint value ~ 3.4e-09 relative;  digits needed to resolve it: ~25
+    coefficient decay |xi_k| (k = 0, 1, 2, ...):
+      0.7021  0.4839  0.1393  0.003878  0.002319  0.0001637  4.623e-5  2.973e-6  2.038e-6
+    eigenvalues (lowest 6): 2.7538467e-12, 1.3245638e-9, 3.6062711e-7, 5.5664385e-5, 0.0061404802, 0.14178378
+
+[C] spectrum of the perturbed scaling operator vs zeros of zeta(1/2+is):
+    max |Im| over spectrum (should be ~0): 0.0
+      k    zeta zero          eigenvalue          difference
+      1    14.134725141735    14.134725146551     4.816e-9
+      2    21.022039638772    21.022041025806     1.387e-6
+      3    25.010857580146    25.010887850709     3.027e-5
+      4     30.42487612586    30.427179466173     0.002303
+      5    32.935061587739    32.946780813905      0.01172
+      6    37.586178158826    37.685232234229      0.09905
+      7    40.918719012147    51.037865715014        10.12
+      8    43.327073280915    151.98859171016        108.7
+
+[D] prolate guess k_lambda = E(h_lambda):
+    c = 2 pi lambda^2 = 25.132741,  Legendre terms = 65,  working digits = 46,  chi_0 = 24.37487885, chi_4 = 214.8470163   [2s]
+    cosine similarity <xi,k>/|xi||k| = -0.99999976881755619561   [1s]
+    1 - |cos|                    = 2.31182e-7
+    Rayleigh quotient Q(k)/|k|^2 = 2.9389675261e-12   (eps_N = 2.75385e-12,  ratio = 1.0672226)   [4s]
+    fraction of |k|^2 outside span(V_n,|n|<=N) = 9.4954e-9
+    Q(k_hat - xi) (unit vectors)  = 1.8512214e-13
+    values at a few u (xi normalized so that xi(lambda)=1, k likewise):
+      u=     0.5   xi=             1.0   k=     1.040108347
+      u=0.707107   xi=     54913.24671   k=     81886.03326
+      u=     1.0   xi=     255791.5442   k=     380227.6167
+      u= 1.41421   xi=     54913.24671   k=     81886.21208
+      u=     2.0   xi=             1.0   k=             1.0
+
+[E] eps_N versus 1 - chi_4(lambda)   (Figure 4 of the paper):
+    1 - chi_4(lambda)            = 1.26544033004781e-13
+    log(1 - chi_4)               = -29.6981860603
+    Fuchs exponent -4 pi lam^2 + 9 log lam = -44.0271578324   (slope reference only)
+    log eps_N                    = -26.6180223972
+    log eps_N - log(1-chi_4)     = 3.08016366316
+    eps_N / (1 - chi_4)          = 21.7619637365

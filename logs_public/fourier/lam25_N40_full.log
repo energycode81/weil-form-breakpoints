@@ -1,0 +1,66 @@
+lambda = 2.5,  L = 2 log lambda = 1.832581464,  N = 40,  70 digits
+prime powers <= lambda^2 = 6.25: [2, 3, 4, 5]
+matrix size (2N+1)x(2N+1) = 81x81
+
+[check] W02 against closed form (4.2):
+    (n,m)=(0,0)  closed=3.92888400457  quad=3.92888400457  diff=-3.62e-71
+    (n,m)=(1,0)  closed=0.0818157180048  quad=0.0818157180048  diff=0.0
+    (n,m)=(2,1)  closed=-0.0402588182854  quad=-0.0402588182854  diff=5.66e-73
+
+[A] building tau ...
+    coefficients n=  0   a=   0.039182293  b=           0.0   [0s]
+    coefficients n=  5   a=     0.1221352  b=    0.19861793   [2s]
+    coefficients n= 10   a=     1.1849281  b=   -0.17043364   [6s]
+    coefficients n= 15   a=     1.8918869  b=     0.4001051   [11s]
+    coefficients n= 20   a=     2.4875943  b=    0.16831446   [18s]
+    coefficients n= 25   a=     2.3807075  b=    0.15848129   [27s]
+    coefficients n= 30   a=     2.7972044  b=    0.44497433   [37s]
+    coefficients n= 35   a=     2.5795976  b=    0.17266741   [49s]
+    coefficients n= 40   a=     2.0492712  b=    0.61577355   [62s]
+
+[B] diagonalizing ...
+    eps_N   (lowest eigenvalue)  = 6.3702570707675495677e-24
+    next eigenvalue              = 9.1833472318221155833e-21
+    gap                          = 9.176976975e-21
+    log eps_N                    = -53.4104024066
+    norm of odd part of xi       = 1.8328e-51
+    eigenvector noise floor ~ 10^-dps/gap = 1.09e-50;  expected endpoint value ~ 6.6e-15 relative;  digits needed to resolve it: ~42
+    coefficient decay |xi_k| (k = 0, 1, 2, ...):
+      0.626  0.495  0.236  0.05737  0.001749  0.001717  5.835e-5  1.878e-5  7.38e-6  2.18e-7  1.635e-7  3.641e-9  9.923e-10  1.788e-9  1.284e-12  9.588e-11  4.113e-11  7.608e-12  3.922e-12  8.056e-15  8.225e-13  2.399e-13  7.0e-13  2.764e-14  1.499e-15  3.666e-13  3.151e-13  1.817e-13  1.016e-13  1.359e-13  1.138e-13  1.466e-14  1.665e-13  3.05e-14  7.874e-14  7.383e-14  7.41e-14  6.656e-14  7.495e-14  5.495e-14  1.023e-13
+    eigenvalues (lowest 6): 6.3702571e-24, 9.1833472e-21, 8.0984448e-18, 6.2107272e-15, 2.8781608e-12, 6.1051769e-10
+
+[C] spectrum of the perturbed scaling operator vs zeros of zeta(1/2+is):
+    max |Im| over spectrum (should be ~0): 3.5123e-62
+      k    zeta zero          eigenvalue          difference
+      1    14.134725141735    14.134725141735    2.309e-20
+      2    21.022039638772    21.022039638772    1.793e-17
+      3    25.010857580146    25.010857580146     8.55e-16
+      4     30.42487612586     30.42487612586    2.509e-13
+      5    32.935061587739    32.935061587742     2.71e-12
+      6    37.586178158826    37.586178158943    1.176e-10
+      7    40.918719012147     40.91871901623     4.083e-9
+      8    43.327073280915    43.327073302822     2.191e-8
+      9    48.005150881167     48.00515226088      1.38e-6
+     10    49.773832477672    49.773839045149     6.567e-6
+
+[D] prolate guess k_lambda = E(h_lambda):
+    c = 2 pi lambda^2 = 39.269908,  Legendre terms = 79,  working digits = 70,  chi_0 = 38.51497374, chi_4 = 342.3184964   [4s]
+    cosine similarity <xi,k>/|xi||k| = 0.99999989516713557786   [5s]
+    1 - |cos|                    = 1.04833e-7
+    Rayleigh quotient Q(k)/|k|^2 = 8.64953256995e-24   (eps_N = 6.37026e-24,  ratio = 1.3577996)   [13s]
+    fraction of |k|^2 outside span(V_n,|n|<=N) = 2.2104e-20
+    Q(k_hat - xi) (unit vectors)  = 2.2792768e-24
+    values at a few u (xi normalized so that xi(lambda)=1, k likewise):
+      u=     0.4   xi=             1.0   k=     1.050245978
+      u=0.632456   xi=    9595306025.0   k=    9936695816.0
+      u=     1.0   xi= 1.340830451e+11   k=  1.38227673e+11
+      u= 1.58114   xi=    9595306025.0   k=    9936695816.0
+      u=     2.5   xi=             1.0   k=             1.0
+
+[E] eps_N versus 1 - chi_4(lambda)   (Figure 4 of the paper):
+    1 - chi_4(lambda)            = 5.6583078272441e-25
+    log(1 - chi_4)               = -55.8315024478
+    Fuchs exponent -4 pi lam^2 + 9 log lam = -70.2931997529   (slope reference only)
+    log eps_N                    = -53.4104024066
+    log eps_N - log(1-chi_4)     = 2.42110004118
+    eps_N / (1 - chi_4)          = 11.25823703

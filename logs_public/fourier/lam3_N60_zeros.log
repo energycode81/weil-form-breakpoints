@@ -1,0 +1,47 @@
+explicit-formula check: lambda=3.0, N=60, eps_N=3.774220561e-38
+  Parseval (1/2pi) int_-200^200 |xi_hat|^2 = 1.0   (||xi||^2 = 1; tail beyond 200 missing)
+  --dps 30 is below the 33 digits needed for xi_hat at this eps; using 33
+
+  computing 3000 zeros at 30 digits (floor |xi_hat|^2 ~ 1e-60 must be << eps), evaluating xi_hat at 33 digits ...
+  zeros done [487s]
+
+  partial sums, counting each zero pair rho, rho-bar:   2 S_M = 2 sum_{k<=M} |xi_hat(t_k)|^2
+     M       t_M        2 S_M / eps_N
+       1   14.134725   1.565013e-27
+       2    21.02204   1.6419789e-27
+       3   25.010858   1.6690888e-27
+       5   32.935062   1.4720225e-26
+      10   49.773832   5.7826454e-19
+      20    77.14484   1.3943444e-8
+      50   143.11185    0.4901213
+     100   236.52423   0.72173407
+     200   396.38185   0.81561781
+     300   541.84744   0.89764825
+     500   811.18436    0.9347299
+    1000   1419.4225   0.93801382
+    1500     1980.91   0.94576458
+    2000   2515.2865   0.95289041
+    3000   3533.3282    0.9629705
+    3000   3533.3282    0.9629705
+
+  contribution to eps by frequency window (2 x sum over zeros in window):
+     t in [    0,   30)      3 zeros   1.66909e-27 of eps   mean|xi_hat|^2 = 1.05e-65
+     t in [   30,   50)      7 zeros   5.78265e-19 of eps   mean|xi_hat|^2 = 1.559e-57
+     t in [   50,   77)      9 zeros   2.67645e-9 of eps   mean|xi_hat|^2 = 5.612e-48
+     t in [   77,  110)     14 zeros    0.0544126 of eps   mean|xi_hat|^2 = 7.334e-41
+     t in [  110,  150)     19 zeros     0.489979 of eps   mean|xi_hat|^2 = 4.867e-40
+     t in [  150,  200)     27 zeros     0.104508 of eps   mean|xi_hat|^2 = 7.304e-41
+     t in [  200,  300)     59 zeros     0.140723 of eps   mean|xi_hat|^2 = 4.501e-41
+     t in [  300,  400)     64 zeros    0.0265999 of eps   mean|xi_hat|^2 = 7.843e-42
+     t in [  400,  600)    139 zeros    0.0990631 of eps   mean|xi_hat|^2 = 1.345e-41
+     t in [  600,  800)    150 zeros    0.0191908 of eps   mean|xi_hat|^2 = 2.414e-42
+     t in [  800, 1200)    322 zeros   0.00164442 of eps   mean|xi_hat|^2 = 9.637e-44
+     t in [ 1200, 1600)    344 zeros   0.00415989 of eps   mean|xi_hat|^2 = 2.282e-43
+     t in [ 1600, 2400)    733 zeros    0.0111428 of eps   mean|xi_hat|^2 = 2.869e-43
+     t in [ 2400, 3200)    776 zeros   0.00870283 of eps   mean|xi_hat|^2 = 2.116e-43
+     t in [ 3200, 3533)    334 zeros   0.00284427 of eps   mean|xi_hat|^2 = 1.607e-43
+
+  tail beyond t_M = 3533.3:  window means fit  <|xi_hat|^2> ~ 3.450e-39 t^(-1.23);  2 x integral against zero density = 0.22062 of eps
+  endpoint value implied by the tail (jump picture, 2 v^2 = A):  v = 4.1533e-20  (divide by the peak value xi(1) to compare with --endpoint)
+
+  2 S_M + tail = 1.1835883 eps_N      (deviation from 1: 0.1836)
