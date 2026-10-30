@@ -1,0 +1,10 @@
+lambda = 2.0, L = 1.3862944, degree 8, 4 pieces, eps = 0.0000000000..., endpoint value v = xi(0) = 2.2658149e-6
+EL weights Lambda(q) q^(-1/2): 2: 0.49013, 3: 0.63428, 4: 0.34657
+
+     cut        at          xi-         xi+        jump       /wv |        xi'-        xi'+        jump       /wv |       xi''-       xi''+        jump       /wv
+ 0.28768   L-log 3      0.17879     0.17879   3.4983e-6    2.4341 |      2.3822      2.3813 -0.00098355   -684.36 |      21.052      21.162      0.1099   76469.0
+ 0.69315     log 2       1.6574      1.6574         0.0       0.0 |  -0.0011306   0.0011306   0.0022611    2036.0 |     -36.434     -36.434 -7.2699e-48 -6.5463e-42
+  1.0986     log 3      0.17879     0.17879  -3.4983e-6   -2.4341 |     -2.3813     -2.3822 -0.00098355   -684.36 |      21.162      21.052     -0.1099  -76469.0
+
+read: a kink with the predicted amplitude = same '/wv' in the xi' block at every prime-power cut;
+      a jump = same '/wv' in the xi block; value/slope continuous to ~eps-level noise otherwise.
