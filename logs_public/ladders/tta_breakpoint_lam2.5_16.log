@@ -1,0 +1,15 @@
+lambda = 2.5, L = 1.8325815, 60 digits, breakpoint basis
+
+[d = 16]  breakpoints: ['0.0', '0.22314', '0.44629', '0.69315', '0.73397', '1.0986', '1.1394', '1.3863', '1.6094', '1.8326']
+    y-segment 0/21  [6s]
+    y-segment 5/21  [31s]
+    y-segment 10/21  [54s]
+    y-segment 15/21  [71s]
+    y-segment 20/21  [79s]
+    matrix built (77x77, 9 pieces, degree 16) [80s]
+    eps_d = 4.75319202677232967e-24   next = 6.2111532e-18   log eps_d = -53.7032258339
+    endpoint/peak = 4.5111668e-12  (log -26.124465)
+    |coeff| of top two degrees per piece: (1.4e-15,2.3e-14)  (2.0e-15,3.1e-15)  (2.3e-15,2.5e-15)  (1.5e-16,6.5e-16)  (2.8e-11,6.1e-13)  (1.5e-16,6.5e-16)  (2.3e-15,2.5e-15)  (2.0e-15,3.1e-15)  (1.4e-15,2.3e-14)
+
+summary:   d    dim   eps_d                  log eps_d     log(v/peak)
+         16     77   4.75319202677233e-24   -53.70322583   -26.124465

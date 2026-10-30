@@ -1,0 +1,38 @@
+lambda = 3.0,  L = 2 log lambda = 2.197224577,  N = 80,  90 digits
+prime powers <= lambda^2 = 9.0: [2, 3, 4, 5, 7, 8, 9]
+matrix size (2N+1)x(2N+1) = 161x161
+
+[check] W02 against closed form (4.2):
+    (n,m)=(0,0)  closed=4.85460920868  quad=4.85460920868  diff=0.0
+    (n,m)=(1,0)  closed=0.144014077646  quad=0.144014077646  diff=0.0
+    (n,m)=(2,1)  closed=-0.0703684927749  quad=-0.0703684927749  diff=-1.53e-92
+
+[A] building tau ...
+    coefficients n=  0   a=   0.040855199  b=           0.0   [0s]
+    coefficients n=  5   a=     2.2555879  b=    0.12535791   [3s]
+    coefficients n= 10   a=    0.69040841  b=    0.53331839   [8s]
+    coefficients n= 15   a=     2.5230106  b=    0.41298173   [14s]
+    coefficients n= 20   a=     2.2487676  b=   -0.11945696   [23s]
+    coefficients n= 25   a=     2.5745963  b=    0.37134834   [34s]
+    coefficients n= 30   a=      2.196496  b=    0.15610678   [46s]
+    coefficients n= 35   a=     2.5955731  b=    0.22485655   [61s]
+    coefficients n= 40   a=     2.9913558  b=    0.52081394   [77s]
+    coefficients n= 45   a=     3.1758541  b=    0.18753546   [96s]
+    coefficients n= 50   a=     2.9550586  b=    0.20562338   [116s]
+    coefficients n= 55   a=     4.4339814  b=    0.29470657   [138s]
+    coefficients n= 60   a=     1.4311323  b=    0.12687701   [162s]
+    coefficients n= 65   a=      4.911385  b=  0.0051933171   [188s]
+    coefficients n= 70   a=     2.0036205  b=    0.71927534   [216s]
+    coefficients n= 75   a=     4.4004659  b=    0.23178765   [246s]
+    coefficients n= 80   a=     3.3797367  b=    0.02613331   [278s]
+
+[B] diagonalising ...
+    eps_N   (lowest eigenvalue)  = 3.2285729221632583193e-38
+    next eigenvalue              = 1.2227550698476185488e-34
+    gap                          = 1.222432213e-34
+    log eps_N                    = -86.3261933139
+    norm of odd part of xi       = 3.3736e-57
+    eigenvector noise floor ~ 10^-dps/gap = 8.18e-57;  expected endpoint value ~ 4.7e-22 relative;  digits needed to resolve it: ~63
+    coefficient decay |xi_k| (k = 0, 1, 2, ...):
+      0.5787  0.4875  0.2867  0.1102  0.02237  0.0003819  0.001149  0.0001042  2.352e-5  3.076e-6  1.31e-6  8.857e-8  4.078e-8  3.04e-9  9.597e-10  1.065e-10  1.244e-10  4.934e-12  3.632e-12  1.162e-12  1.524e-13  1.654e-14  3.105e-14  2.2e-15  9.22e-16  2.815e-16  1.992e-16  2.106e-18  1.739e-17  1.444e-19  2.324e-18  1.712e-19  8.384e-19  6.219e-20  1.988e-19  1.23e-19  6.174e-20  3.096e-21  1.051e-19  1.301e-20  1.894e-20  2.986e-20  2.232e-20  7.496e-21  5.653e-22  6.152e-21  1.341e-20  6.681e-21  1.472e-20  9.723e-21  8.762e-21  1.624e-20  1.781e-20  5.456e-21  4.777e-21  1.159e-21  2.687e-21  5.348e-21  2.08e-21  4.415e-21  2.075e-20  7.159e-21  9.807e-21  1.091e-20  1.195e-20  5.478e-21  7.31e-21  9.519e-21  1.073e-20  5.546e-21  1.986e-20  1.02e-20  8.414e-21  5.641e-21  7.318e-21  4.872e-21  7.278e-21  4.637e-21  7.245e-21  3.518e-21  2.356e-21
+    eigenvalues (lowest 6): 3.2285729e-38, 1.2227551e-34, 2.4493089e-31, 3.6743011e-28, 5.01172e-25, 3.919417e-22

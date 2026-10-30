@@ -1,0 +1,34 @@
+lambda = 3.0,  L = 2 log lambda = 2.197224577,  N = 60,  90 digits
+prime powers <= lambda^2 = 9.0: [2, 3, 4, 5, 7, 8, 9]
+matrix size (2N+1)x(2N+1) = 121x121
+
+[check] W02 against closed form (4.2):
+    (n,m)=(0,0)  closed=4.85460920868  quad=4.85460920868  diff=0.0
+    (n,m)=(1,0)  closed=0.144014077646  quad=0.144014077646  diff=0.0
+    (n,m)=(2,1)  closed=-0.0703684927749  quad=-0.0703684927749  diff=-1.53e-92
+
+[A] building tau ...
+    coefficients n=  0   a=   0.040855199  b=           0.0   [0s]
+    coefficients n=  5   a=     2.2555879  b=    0.12535791   [3s]
+    coefficients n= 10   a=    0.69040841  b=    0.53331839   [8s]
+    coefficients n= 15   a=     2.5230106  b=    0.41298173   [14s]
+    coefficients n= 20   a=     2.2487676  b=   -0.11945696   [23s]
+    coefficients n= 25   a=     2.5745963  b=    0.37134834   [33s]
+    coefficients n= 30   a=      2.196496  b=    0.15610678   [46s]
+    coefficients n= 35   a=     2.5955731  b=    0.22485655   [60s]
+    coefficients n= 40   a=     2.9913558  b=    0.52081394   [76s]
+    coefficients n= 45   a=     3.1758541  b=    0.18753546   [95s]
+    coefficients n= 50   a=     2.9550586  b=    0.20562338   [115s]
+    coefficients n= 55   a=     4.4339814  b=    0.29470657   [137s]
+    coefficients n= 60   a=     1.4311323  b=    0.12687701   [162s]
+
+[B] diagonalising ...
+    eps_N   (lowest eigenvalue)  = 3.7742205611384548088e-38
+    next eigenvalue              = 1.3177882321834748143e-34
+    gap                          = 1.31741081e-34
+    log eps_N                    = -86.1700396463
+    norm of odd part of xi       = 3.3171e-57
+    eigenvector noise floor ~ 10^-dps/gap = 7.59e-57;  expected endpoint value ~ 4.7e-22 relative;  digits needed to resolve it: ~63
+    coefficient decay |xi_k| (k = 0, 1, 2, ...):
+      0.5787  0.4875  0.2867  0.1102  0.02238  0.000382  0.00115  0.0001043  2.355e-5  3.081e-6  1.313e-6  8.878e-8  4.09e-8  3.051e-9  9.636e-10  1.071e-10  1.251e-10  4.966e-12  3.658e-12  1.172e-12  1.538e-13  1.671e-14  3.143e-14  2.23e-15  9.363e-16  2.864e-16  2.032e-16  2.153e-18  1.782e-17  1.485e-19  2.398e-18  1.774e-19  8.729e-19  6.535e-20  2.092e-19  1.307e-19  6.662e-20  2.627e-21  1.132e-19  1.42e-20  2.081e-20  3.428e-20  2.694e-20  1.012e-20  5.443e-21  4.568e-21  1.373e-20  7.478e-21  1.313e-20  1.041e-20  1.049e-20  1.811e-20  2.268e-20  9.254e-21  1.118e-20  4.024e-21  2.086e-21  1.947e-21  2.077e-21  1.061e-21  9.174e-21
+    eigenvalues (lowest 6): 3.7742206e-38, 1.3177882e-34, 2.7105651e-31, 4.4857082e-28, 5.5492359e-25, 4.1162627e-22

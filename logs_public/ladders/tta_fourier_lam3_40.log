@@ -1,0 +1,30 @@
+lambda = 3.0,  L = 2 log lambda = 2.197224577,  N = 40,  90 digits
+prime powers <= lambda^2 = 9.0: [2, 3, 4, 5, 7, 8, 9]
+matrix size (2N+1)x(2N+1) = 81x81
+
+[check] W02 against closed form (4.2):
+    (n,m)=(0,0)  closed=4.85460920868  quad=4.85460920868  diff=0.0
+    (n,m)=(1,0)  closed=0.144014077646  quad=0.144014077646  diff=0.0
+    (n,m)=(2,1)  closed=-0.0703684927749  quad=-0.0703684927749  diff=-1.53e-92
+
+[A] building tau ...
+    coefficients n=  0   a=   0.040855199  b=           0.0   [0s]
+    coefficients n=  5   a=     2.2555879  b=    0.12535791   [3s]
+    coefficients n= 10   a=    0.69040841  b=    0.53331839   [7s]
+    coefficients n= 15   a=     2.5230106  b=    0.41298173   [14s]
+    coefficients n= 20   a=     2.2487676  b=   -0.11945696   [23s]
+    coefficients n= 25   a=     2.5745963  b=    0.37134834   [33s]
+    coefficients n= 30   a=      2.196496  b=    0.15610678   [45s]
+    coefficients n= 35   a=     2.5955731  b=    0.22485655   [60s]
+    coefficients n= 40   a=     2.9913558  b=    0.52081394   [76s]
+
+[B] diagonalising ...
+    eps_N   (lowest eigenvalue)  = 5.3927443509770275413e-38
+    next eigenvalue              = 2.0803601204325943802e-34
+    gap                          = 2.079820846e-34
+    log eps_N                    = -85.8131791224
+    norm of odd part of xi       = 1.6575e-57
+    eigenvector noise floor ~ 10^-dps/gap = 4.81e-57;  expected endpoint value ~ 4.7e-22 relative;  digits needed to resolve it: ~63
+    coefficient decay |xi_k| (k = 0, 1, 2, ...):
+      0.5788  0.4876  0.2866  0.1102  0.02237  0.0003817  0.001149  0.0001042  2.35e-5  3.073e-6  1.309e-6  8.845e-8  4.071e-8  3.035e-9  9.576e-10  1.063e-10  1.24e-10  4.92e-12  3.62e-12  1.158e-12  1.518e-13  1.647e-14  3.093e-14  2.191e-15  9.185e-16  2.805e-16  1.986e-16  2.101e-18  1.737e-17  1.445e-19  2.332e-18  1.725e-19  8.501e-19  6.492e-20  2.036e-19  1.294e-19  6.915e-20  2.411e-21  9.922e-20  1.215e-20  1.261e-20
+    eigenvalues (lowest 6): 5.3927444e-38, 2.0803601e-34, 4.4258371e-31, 6.6377586e-28, 7.4145e-25, 5.1783276e-22

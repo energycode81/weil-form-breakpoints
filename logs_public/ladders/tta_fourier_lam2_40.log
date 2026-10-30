@@ -1,0 +1,30 @@
+lambda = 2.0,  L = 2 log lambda = 1.386294361,  N = 40,  50 digits
+prime powers <= lambda^2 = 4.0: [2, 3, 4]
+matrix size (2N+1)x(2N+1) = 81x81
+
+[check] W02 against closed form (4.2):
+    (n,m)=(0,0)  closed=2.88539008178  quad=2.88539008178  diff=-5.35e-51
+    (n,m)=(1,0)  closed=0.0346930316015  quad=0.0346930316015  diff=-8.35e-53
+    (n,m)=(2,1)  closed=-0.0171886655166  quad=-0.0171886655166  diff=4.18e-53
+
+[A] building tau ...
+    coefficients n=  0   a=   0.069704243  b=           0.0   [0s]
+    coefficients n=  5   a=     1.5162963  b=     0.2058035   [2s]
+    coefficients n= 10   a=      1.251231  b=    0.15965065   [5s]
+    coefficients n= 15   a=     2.6715926  b=    0.11962081   [9s]
+    coefficients n= 20   a=     2.0246926  b=   0.087142161   [15s]
+    coefficients n= 25   a=     3.2823177  b=   0.063851724   [22s]
+    coefficients n= 30   a=     2.5441524  b=    0.05098369   [30s]
+    coefficients n= 35   a=     3.7405652  b=   0.049225298   [39s]
+    coefficients n= 40   a=     2.9546335  b=   0.058659299   [50s]
+
+[B] diagonalising ...
+    eps_N   (lowest eigenvalue)  = 8.8827601788231378907e-13
+    next eigenvalue              = 5.4204288632735200711e-10
+    gap                          = 5.411546103e-10
+    log eps_N                    = -27.7494938693
+    norm of odd part of xi       = 1.6982e-41
+    eigenvector noise floor ~ 10^-dps/gap = 1.85e-41;  expected endpoint value ~ 3.4e-09 relative;  digits needed to resolve it: ~25
+    coefficient decay |xi_k| (k = 0, 1, 2, ...):
+      0.7019  0.484  0.1395  0.003893  0.002334  0.0001652  4.674e-5  2.985e-6  1.97e-6  1.427e-7  5.694e-7  2.639e-7  2.325e-7  1.532e-7  2.188e-7  6.939e-8  2.421e-8  1.414e-8  2.127e-8  1.174e-8  5.2e-8  3.292e-8  3.064e-8  2.763e-8  6.293e-8  4.772e-8  4.962e-8  2.823e-8  5.053e-8  4.587e-8  5.787e-8  3.055e-8  3.78e-8  3.527e-8  5.505e-8  3.466e-8  3.465e-8  2.466e-8  4.222e-8  3.521e-8  4.126e-8
+    eigenvalues (lowest 6): 8.8827602e-13, 5.4204289e-10, 1.7005603e-7, 3.4662712e-5, 0.002640924, 0.096168636

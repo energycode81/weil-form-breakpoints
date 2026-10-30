@@ -1,0 +1,25 @@
+lambda = 2.0,  L = 2 log lambda = 1.386294361,  N = 15,  50 digits
+prime powers <= lambda^2 = 4.0: [2, 3, 4]
+matrix size (2N+1)x(2N+1) = 31x31
+
+[check] W02 against closed form (4.2):
+    (n,m)=(0,0)  closed=2.88539008178  quad=2.88539008178  diff=-5.35e-51
+    (n,m)=(1,0)  closed=0.0346930316015  quad=0.0346930316015  diff=-8.35e-53
+    (n,m)=(2,1)  closed=-0.0171886655166  quad=-0.0171886655166  diff=4.18e-53
+
+[A] building tau ...
+    coefficients n=  0   a=   0.069704243  b=           0.0   [0s]
+    coefficients n=  5   a=     1.5162963  b=     0.2058035   [2s]
+    coefficients n= 10   a=      1.251231  b=    0.15965065   [5s]
+    coefficients n= 15   a=     2.6715926  b=    0.11962081   [9s]
+
+[B] diagonalising ...
+    eps_N   (lowest eigenvalue)  = 1.067571079298819113e-12
+    next eigenvalue              = 6.9623975767038581352e-10
+    gap                          = 6.951721866e-10
+    log eps_N                    = -27.5656350672
+    norm of odd part of xi       = 3.6935e-42
+    eigenvector noise floor ~ 10^-dps/gap = 1.44e-41;  expected endpoint value ~ 3.4e-09 relative;  digits needed to resolve it: ~25
+    coefficient decay |xi_k| (k = 0, 1, 2, ...):
+      0.7017  0.484  0.1397  0.003906  0.002349  0.000167  4.751e-5  3.059e-6  2.045e-6  1.579e-7  5.919e-7  2.823e-7  2.528e-7  1.683e-7  2.52e-7  9.143e-8
+    eigenvalues (lowest 6): 1.0675711e-12, 6.9623976e-10, 2.6132551e-7, 3.6679937e-5, 0.0032839744, 0.11664668
