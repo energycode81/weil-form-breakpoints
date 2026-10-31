@@ -4,7 +4,7 @@ Code, logs and eigenvectors for the note
 
 > J. Echt, *An Improved Computation of the Truncated Weil-form Minimizer: Breakpoints at the Prime-power Positions*, October 2026 (`weil_form_breakpoints.md` in this repository).
 
-The note (`weil_form_breakpoints.md`) shows that the Fourier basis used in every published computation of the Connes–Consani–Moscovici truncated Weil form does not converge to its lowest eigenvalue ε_λ at any practical size (at dimension 201 it is at least 2.6%, 14% and 27% above the minimum at λ = 2, 2.5 and 3), explains why (the minimizer has corners at y = log p^m and L − log p^m, one pair for each prime power p^m ≤ λ²), and gives a piecewise-polynomial basis with cuts at these corners' positions that reaches within 0.1% of the minimum at dimension 26 at λ = 2. Everything in the note can be reproduced from this repository on ordinary hardware.
+The note (`weil_form_breakpoints.md`) shows that the Fourier basis used in every published computation of the Connes–Consani–Moscovici truncated Weil form (*Zeta Spectral Triples*, arXiv:2511.22755) does not converge to its lowest eigenvalue ε_λ at any practical size (at dimension 201 it is at least 2.6%, 14% and 27% above the minimum at λ = 2, 2.5 and 3), explains why (the minimizer has corners at y = log p^m and L − log p^m, one pair for each prime power p^m ≤ λ²), and gives a piecewise-polynomial basis with cuts at these corners' positions that reaches within 0.1% of the minimum at dimension 26 at λ = 2. Everything in the note can be reproduced from this repository on ordinary hardware.
 
 This analysis was produced with the assistance of Anthropic's Claude (Fable 5.1). Every computation was run by the author, who is responsible for all content.
 
@@ -21,13 +21,13 @@ This analysis was produced with the assistance of Anthropic's Claude (Fable 5.1)
 | `logs/` | the output of every run quoted in the note, grouped by what produced it: `fourier/`, `fourier/ablation/`, `breakpoint/`, `breakpoint/controls/`, `legendre/`, `diagnostics/`, `validation/`, `ladders/` |
 | `logs/INDEX.md` | one line per log: the command that produced it and the numbers in the note it backs |
 | `tta_table.md` | time-to-accuracy ladders of the Fourier and breakpoint bases at λ = 2, 2.5, 3 (ε and wall time against matrix size) |
-| `dumps/` | the eigenvectors (JSON) that the diagnostics were run on, plus the zeros cache for `bp_zerosum.py`. |
+| `dumps/` | the eigenvectors (JSON) that the diagnostics were run on, plus the zeros cache for `bp_zerosum.py` |
 
 ## Running
 
 Every script prints its options with `--help`. The two that matter most:
 
-- `--dps` sets the working precision in decimal digits (50–140 in the runs reported; ε_λ is 10⁻¹³ at λ = 2 and 10⁻³⁸ at λ = 3, so the precision has to be well above the digits of ε).
+- `--dps` sets the working precision in decimal digits (50–140 in the runs reported; ε_λ is 10⁻¹³ at λ = 2 and 10⁻³⁸ at λ = 3, so the precision has to be comfortably more than 13 and 38 digits respectively).
 - `--ygl` (breakpoint basis only) is the number of Gauss–Legendre quadrature nodes per integration segment; the default is max(24, 2d + 8) for degree d. The matrix at degree 32 is unchanged to 16 digits between 32 and 72 nodes.
 
 The commands behind the headline numbers, each with the log it produced:
@@ -57,10 +57,19 @@ python3 bp_zerosum.py bp_lam2_d20.json --zeros-cache zeros.json           # logs
 
 ## Reading the logs
 
-- Each log starts with the parameters of the run (λ, L, N or d, digits, the prime powers used) and, for the Fourier basis, three `[check] W02` lines comparing the pole-term quadrature with the paper's closed form.
+- Each log starts with the parameters of the run (λ, L, N or d, digits, the prime powers used) and, for the Fourier basis, three `[check] W02` lines comparing the pole-term quadrature with the closed form (4.2) of arXiv:2511.22755.
 - The `[…s]` stamps inside a log are matrix-assembly time only. Wall times for the time-to-accuracy ladders are in `logs/ladders/tta.csv`.
-- Every value printed is a Rayleigh–Ritz upper bound on ε_λ (given exact matrix entries), so the smaller of two values from any two bases is the closer.
+- Every value printed is a Rayleigh–Ritz upper bound on ε_λ (given exact matrix entries), so the smaller of two values from any two bases is the closer. The exception is `fourier/ablation/`: there the primes are removed or truncated, so the form is no longer the Weil form and its eigenvalues bound nothing about ε_λ.
 - The ladder logs in `logs/ladders/` were produced by an earlier version of the scripts and print `diagonalising` where the current scripts print `diagonalizing`; the numbers are unaffected. The N = 100 Fourier rows and several breakpoint rows were rerun with the current scripts (see `tta_table.md`) and reproduce the ladder values to every printed digit.
+
+### Log vocabulary
+
+- **ξ (xi)** is the computed minimizer, normalized to unit L² norm on [λ⁻¹, λ]; **eps_N / eps_d / eps_M** is the lowest eigenvalue in the Fourier, breakpoint or Legendre basis. All positions are in the variable y = log λu ∈ [0, L].
+- **Breakpoint logs** (`weil_breakpoints.py`): `breakpoints` lists the cut positions in y; `endpoint/peak` is ξ(0)/ξ(L/2), the endpoint value relative to the peak; the "top two degrees per piece" are the two highest-degree Legendre coefficients on each piece, a per-piece convergence indicator.
+- **`bp_jumps` logs**: one row per cut. `at` is the cut position with its name (log q or L − log q). `xi−` and `xi+` are the one-sided values of ξ at the cut, evaluated from the polynomial pieces to its left and right; `jump` is their difference; `/wv` is that jump divided by Λ(q) q^(−1/2) times the endpoint value v = ξ(0) printed in the header. The second and third blocks repeat this for the first and second derivatives ξ′ and ξ″. The quantity quoted in Section 2 of the note (the amplitude ratio) is `/wv` in the first (value) block.
+- **`bp_zerosum` logs**: partial sums of the explicit-formula zero sum, reported as fractions of eps_d.
+- **`leg_window` logs**: the Euler–Lagrange residual of the Legendre minimizer in a small window around each candidate position.
+- **`bp_piece_decay` logs**: the decay of each piece's Legendre coefficients across degrees.
 
 ## Notation
 
