@@ -16,7 +16,7 @@ negatives and carry no independent information.  When L/2 is itself a prime posi
 (log 2 at lambda = 2, log 3 at lambda = 3) the value jump there is identically zero by the
 same symmetry.  The '/wv' column is jump / (Lambda(q) q^{-1/2} * v) with v = xi(0) the raw
 (L^2-unit, sign-arbitrary) eigenvector value at y = 0; v cancels in ratios between cuts.
-The note (section 6) uses the value-jump '/wv' only, across degrees: a resolved step would
+The note (section 2) uses the value-jump '/wv' only, across degrees: a resolved step would
 make it degree-independent, a kink would send it to zero; the measured ratios do neither.
 """
 import json, sys
@@ -89,4 +89,4 @@ for j in range(1, len(B) - 1):
     print("".join(cells).rstrip(" |") )
 print()
 print("note: rows at L-log q are the mirror images of the rows at log q (even basis) and are not independent;")
-print("      compare the xi-block '/wv' across degrees and across q (section 6 of the note).")
+print("      compare the xi-block '/wv' across degrees and across q (section 2 of the note).")
