@@ -7,4 +7,4 @@ EL weights Lambda(q) q^(-1/2): 2: 0.49013, 3: 0.63428, 4: 0.34657
   1.0986     log 3      0.17829     0.17829   2.0581e-7   0.15351 |     -2.3806     -2.3805  0.00013499    100.68 |      21.089      21.045   -0.043454  -32411.0
 
 note: rows at L-log q are the mirror images of the rows at log q (even basis) and are not independent;
-      compare the xi-block '/wv' across degrees and across q (section 6 of the note).
+      compare the xi-block '/wv' across degrees and across q (section 2 of the note).

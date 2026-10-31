@@ -1,0 +1,10 @@
+lambda = 2.0, L = 1.3862944, degree 64, 4 pieces, eps = 0.0000000000..., endpoint value v = xi(0) = 1.8350346e-6
+EL weights Lambda(q) q^(-1/2): 2: 0.49013, 3: 0.63428, 4: 0.34657
+
+     cut        at          xi-         xi+        jump       /wv |        xi'-        xi'+        jump       /wv |       xi''-       xi''+        jump       /wv
+ 0.28768   L-log 3      0.17829     0.17829  -1.3863e-7  -0.11911 |      2.3802      2.3805  0.00029864    256.58 |        19.7      21.533       1.833 1.5748e+6
+ 0.69315     log 2       1.6577      1.6577         0.0       0.0 | -0.00012889  0.00012889  0.00025778    286.61 |     -36.389     -36.389 -7.3554e-48 -8.1781e-42
+  1.0986     log 3      0.17829     0.17829   1.3863e-7   0.11911 |     -2.3805     -2.3802  0.00029864    256.58 |      21.533        19.7      -1.833 -1.5748e+6
+
+note: rows at L-log q are the mirror images of the rows at log q (even basis) and are not independent;
+      compare the xi-block '/wv' across degrees and across q (section 2 of the note).
