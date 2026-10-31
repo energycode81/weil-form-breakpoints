@@ -1,6 +1,6 @@
 # Log index
 
-One line per log file: the command that produced it and what it backs in the note (`weil_form_breakpoints.md`). Section references are to that note: the Abstract, Setting, §1 (the Fourier values and Groskin's tables), §2 (the corners, the breakpoint basis and its three tests), §3 (the Figure 4 comparison), and "What is not claimed". Logs marked *supporting* are runs whose numbers are not quoted in the note but which the quoted numbers were checked against; they are kept so that nothing behind the note is missing.
+One line per log file: the command that produced it and what it backs in the note (`weil_form_breakpoints.md`). Section references are to that note: the Abstract, Setting, Section 1 (the Fourier values and Groskin's tables), Section 2 (the corners, the breakpoint basis and its three tests), Section 3 (the Figure 4 comparison), and "What is not claimed". Logs marked *supporting* are runs whose numbers are not quoted in the note but which the quoted numbers were checked against; they are kept so that nothing behind the note is missing.
 
 All runs are `python3 <script> …` with the scripts in the repository root; `tee logs/<path>` captures the output. The eigenvectors that the diagnostics were run on are in `dumps/`. The `[…s]` stamps inside the logs are matrix-assembly time only; wall times for the ladders are in `ladders/tta.csv`.
 
@@ -28,13 +28,13 @@ Logs are grouped by what produced them, not by when they were run:
 
 | file | command | backs |
 |---|---|---|
-| `lam2_N100.log` | `weil_step1.py --lam 2 --N 100 --dps 50 --no-prolate --no-spectrum` | Abstract, §1: N = 100 value 7.71·10⁻¹³, 2.6% above the breakpoint value |
-| `lam25_N100.log` | `weil_step1.py --lam 2.5 --N 100 --dps 60 --no-prolate --no-spectrum` | Abstract, §1: 5.41·10⁻²⁴, 14% above; §3: Fourier offset 2.26 |
-| `lam3_N100.log` | `weil_step1.py --lam 3 --N 100 --dps 90 --no-prolate --no-spectrum` | Abstract, §1: 3.14·10⁻³⁸, 27% above |
-| `lam2_N60.log` | `weil_step1.py --lam 2 --N 60 --dps 60 --no-prolate --no-spectrum --dump xi_lam2_N60.json` | §2 ("below the Fourier value at dimension 121"): 8.13·10⁻¹³ |
-| `lam2_N30_full.log` | `weil_step1.py --lam 2 --N 30 --dps 60` | §3: Fourier offset 2.03 at λ = 2 |
-| `lam3_N60_full.log` | `weil_step1.py --lam 3 --N 60 --dps 100` | Setting: zeta-zero accuracy 2·10⁻³⁴ at λ = 3 with a 121×121 matrix; §3: Fourier offset 2.51 |
-| `lam35_N60_full.log` | `weil_step1.py --lam 3.5 --N 60 --dps 85` | §3: Fourier offset ≤ 2.94 at λ = 3.5 |
+| `lam2_N100.log` | `weil_step1.py --lam 2 --N 100 --dps 50 --no-prolate --no-spectrum` | Abstract, Section 1: N = 100 value 7.71·10⁻¹³, 2.6% above the breakpoint value |
+| `lam25_N100.log` | `weil_step1.py --lam 2.5 --N 100 --dps 60 --no-prolate --no-spectrum` | Abstract, Section 1: 5.41·10⁻²⁴, 14% above; Section 3: Fourier offset 2.26 |
+| `lam3_N100.log` | `weil_step1.py --lam 3 --N 100 --dps 90 --no-prolate --no-spectrum` | Abstract, Section 1: 3.14·10⁻³⁸, 27% above |
+| `lam2_N60.log` | `weil_step1.py --lam 2 --N 60 --dps 60 --no-prolate --no-spectrum --dump xi_lam2_N60.json` | Section 2 ("below the Fourier value at dimension 121"): 8.13·10⁻¹³ |
+| `lam2_N30_full.log` | `weil_step1.py --lam 2 --N 30 --dps 60` | Section 3: Fourier offset 2.03 at λ = 2 |
+| `lam3_N60_full.log` | `weil_step1.py --lam 3 --N 60 --dps 100` | Setting: zeta-zero accuracy 2·10⁻³⁴ at λ = 3 with a 121×121 matrix; Section 3: Fourier offset 2.51 |
+| `lam35_N60_full.log` | `weil_step1.py --lam 3.5 --N 60 --dps 85` | Section 3: Fourier offset ≤ 2.94 at λ = 3.5 |
 | `lam42_N100.log`, `lam42_N120.log` | `weil_step1.py --lam 4.2 --N <100, 120> --dps 140 …` | What is not claimed: the largest λ run (4.2, prime powers ≤ 17); Fourier only |
 | `lamsqrt2_N6.log`, `lamsqrt2_N10.log` | `weil_step1.py --lam 1.41421356237 --N <6, 10> --dps 30 …` | supporting: Setting (simple, even ground state at every λ run) |
 | `run_lam3_N20.log`, `lam3_N20_full90.log` | `weil_step1.py --lam 3 --N 20 --dps <60, 90>` | supporting: zeta-zero accuracy at smaller N |
@@ -54,33 +54,33 @@ Logs are grouped by what produced them, not by when they were run:
 
 | file | command | backs |
 |---|---|---|
-| `lam2_d28.log`, `lam2_d36.log`, `lam2_d48.log` | `weil_breakpoints.py --lam 2 --d <d> --dps 50 --dump bp_lam2_d<d>_v2.json` (`--ygl` scaled with d) | Abstract, §1: best λ = 2 value 7.5187·10⁻¹³ at dimension 98; last ladder step 5·10⁻⁵ (7.5191 → 7.5187) |
-| `lam25_correct_d32.log` | `weil_breakpoints.py --lam 2.5 --d 32 --dps 60 --ygl 32 --dump bp_lam25_d32.json` | Abstract, §1: best λ = 2.5 value 4.7414·10⁻²⁴ at dimension 149 |
-| `lam25_correct_d24.log` | same, `--d 24` | §1: last ladder step 4·10⁻⁴ (4.7433 → 4.7414) |
-| `lam25_correct_d32_ygl72.log` | `weil_breakpoints.py --lam 2.5 --d 32 --dps 60 --dump …` (default 72-point rule) | §1: matrix unchanged to 16 digits under quadrature refinement at degree 32 |
-| `lam25_correct_d20.log` | `weil_breakpoints.py --lam 2.5 --d 20 --dps 60 --ygl 32 --dump bp_lam25_d20.json` | §2 Positions: correct-position value 4.7462·10⁻²⁴ |
-| `lam22_correct_d12.log`, `_d16`, `_d20` | `weil_breakpoints.py --lam 2.2 --d <d> --dps 60 --ygl 32` | §2 Positions: reference ladder 5.73261, 5.72700, 5.72584 ×10⁻¹⁷ |
-| `lam3_d24_plain.log` | `weil_breakpoints.py --lam 3 --d 24 --dps 90 --ygl 32` | §2 (second-order test): reference value 2.48829·10⁻³⁸ |
+| `lam2_d28.log`, `lam2_d36.log`, `lam2_d48.log` | `weil_breakpoints.py --lam 2 --d <d> --dps 50 --dump bp_lam2_d<d>_v2.json` (`--ygl` scaled with d) | Abstract, Section 1: best λ = 2 value 7.5187·10⁻¹³ at dimension 98; last ladder step 5·10⁻⁵ (7.5191 → 7.5187) |
+| `lam25_correct_d32.log` | `weil_breakpoints.py --lam 2.5 --d 32 --dps 60 --ygl 32 --dump bp_lam25_d32.json` | Abstract, Section 1: best λ = 2.5 value 4.7414·10⁻²⁴ at dimension 149 |
+| `lam25_correct_d24.log` | same, `--d 24` | Section 1: last ladder step 4·10⁻⁴ (4.7433 → 4.7414) |
+| `lam25_correct_d32_ygl72.log` | `weil_breakpoints.py --lam 2.5 --d 32 --dps 60 --dump …` (default 72-point rule) | Section 1: matrix unchanged to 16 digits under quadrature refinement at degree 32 |
+| `lam25_correct_d20.log` | `weil_breakpoints.py --lam 2.5 --d 20 --dps 60 --ygl 32 --dump bp_lam25_d20.json` | Section 2 Positions: correct-position value 4.7462·10⁻²⁴ |
+| `lam22_correct_d12.log`, `_d16`, `_d20` | `weil_breakpoints.py --lam 2.2 --d <d> --dps 60 --ygl 32` | Section 2 Positions: reference ladder 5.73261, 5.72700, 5.72584 ×10⁻¹⁷ |
+| `lam3_d24_plain.log` | `weil_breakpoints.py --lam 3 --d 24 --dps 90 --ygl 32` | Section 2 (second-order test): reference value 2.48829·10⁻³⁸ |
 
 ## breakpoint/controls/
 
 | file | command | backs |
 |---|---|---|
-| `lam25_shifted_d20.log` | `weil_breakpoints.py --lam 2.5 --d 20 --dps 60 --ygl 32 --no-breaks --extra-breaks 0.64315,1.04861,1.33629,1.55944` | Abstract, §2 Positions: 4.8020·10⁻²⁴ (+1.2%) |
-| `lam25_midpoint_d20.log` | `… --no-breaks --extra-breaks 0.11157,0.33472,0.56972,0.71356` | Abstract, §2 Positions: 4.8337·10⁻²⁴ (+1.8%) |
-| `lam22_shifted_d12.log`, `_d16`, `_d20` | `weil_breakpoints.py --lam 2.2 --d <d> --dps 60 --ygl 32 --no-breaks --extra-breaks 0.64315,1.04861,1.33629` | §2 Positions: +1.9%, +1.3%, +0.94% |
+| `lam25_shifted_d20.log` | `weil_breakpoints.py --lam 2.5 --d 20 --dps 60 --ygl 32 --no-breaks --extra-breaks 0.64315,1.04861,1.33629,1.55944` | Abstract, Section 2 Positions: 4.8020·10⁻²⁴ (+1.2%) |
+| `lam25_midpoint_d20.log` | `… --no-breaks --extra-breaks 0.11157,0.33472,0.56972,0.71356` | Abstract, Section 2 Positions: 4.8337·10⁻²⁴ (+1.8%) |
+| `lam22_shifted_d12.log`, `_d16`, `_d20` | `weil_breakpoints.py --lam 2.2 --d <d> --dps 60 --ygl 32 --no-breaks --extra-breaks 0.64315,1.04861,1.33629` | Section 2 Positions: +1.9%, +1.3%, +0.94% |
 | `lam22_midpoint_d20.log` | `… --lam 2.2 --d 20 … --no-breaks --extra-breaks 0.09531,0.33446,0.58573` | supporting: midpoints at λ = 2.2 (+1.7%) |
-| `lam3_d24_predextras.log` | `weil_breakpoints.py --lam 3 --d 24 --dps 90 --ygl 32 --extra-breaks 0.28768,0.33647,0.47000` | Abstract, §1: best λ = 3 value 2.470·10⁻³⁸ at dimension 225; §2: cuts at the predicted second-order positions |
-| `lam3_d24_wrongextras.log` | same with `--extra-breaks 0.30,0.40,0.50` | §2: arbitrary cuts in the same piece give the same improvement (2.4699·10⁻³⁸) |
+| `lam3_d24_predextras.log` | `weil_breakpoints.py --lam 3 --d 24 --dps 90 --ygl 32 --extra-breaks 0.28768,0.33647,0.47000` | Abstract, Section 1: best λ = 3 value 2.470·10⁻³⁸ at dimension 225; Section 2: cuts at the predicted second-order positions |
+| `lam3_d24_wrongextras.log` | same with `--extra-breaks 0.30,0.40,0.50` | Section 2: arbitrary cuts in the same piece give the same improvement (2.4699·10⁻³⁸) |
 | `lam2_d12_cut_log32.log`, `lam22_secondorder_cuts.log`, `lam25_center_cut.log` | single extra cuts (`--extra-breaks`) at λ = 2, 2.2, 2.5 | supporting: single-cut tests without a displaced control |
 
 ## legendre/
 
 | file | command | backs |
 |---|---|---|
-| `leg2_M48.log` | `weil_legendre.py --lam 2 --M 48 --dps 50 --dump leg2.json` | §2 ("below the Legendre value at degree 48"): 7.730·10⁻¹³ |
-| `leg22_window.log` | `leg_window.py leg22_M80.json 40` | §2 Positions: residual scan at λ = 2.2, no preference for the prime positions |
-| `leg25_window.log` | `leg_window.py leg25_M120.json 60` | §2 Positions: the same at λ = 2.5 |
+| `leg2_M48.log` | `weil_legendre.py --lam 2 --M 48 --dps 50 --dump leg2.json` | Section 2 ("below the Legendre value at degree 48"): 7.730·10⁻¹³ |
+| `leg22_window.log` | `leg_window.py leg22_M80.json 40` | Section 2 Positions: residual scan at λ = 2.2, no preference for the prime positions |
+| `leg25_window.log` | `leg_window.py leg25_M120.json 60` | Section 2 Positions: the same at λ = 2.5 |
 | `leg22_M80.log`, `leg25_M120.log` | `weil_legendre.py --lam <2.2, 2.5> --M <80, 120> --dps 60 --dump …` | supporting: the eigenvectors the two scans were run on |
 | `leg25_M80_M100.log` | `weil_legendre.py --lam 2.5 --M 80,100 --dps 60` | supporting: the λ = 2.5 Legendre ladder |
 
@@ -88,17 +88,17 @@ Logs are grouped by what produced them, not by when they were run:
 
 | file | command | backs |
 |---|---|---|
-| `bp_jumps_bp_lam25_d<16,20,24,32>.log` | `bp_jumps.py bp_lam25_d<d>.json` | §2 Amplitude: within 10% across prime powers at degree 32 (0.128–0.141), within a factor of 1.5 at degree 16; ratio from 0.16–0.23 to 0.13–0.14 |
-| `bp_jumps_bp_lam22_d<16,20,24>.log` | `bp_jumps.py bp_lam22_d<d>.json` | §2 Amplitude: within 5–17% at λ = 2.2 |
-| `bp_jumps_bp_lam2_d<8…48>.log` (7 files) | `bp_jumps.py bp_lam2_d<d>.json` (d = 8–20), `bp_jumps.py bp_lam2_d<d>_v2.json` (d = 28, 36, 48) | §2 Amplitude: ratio 0.19 → 0.125 over degrees 12–48 at λ = 2 |
-| `bp_zerosum_lam2_d20.log` | `bp_zerosum.py bp_lam2_d20.json --zeros-cache zeros.json` | §2 Matrix-free check: 0.992 from 3000 zeros, 0.9995 with fitted t^{−2.07} tail |
-| `lam22_piece_decay.log` | `bp_piece_decay.py bp_lam22_d16.json bp_lam22_d20.json bp_lam22_d24.json` | supporting: §2 ("what remains … on the prime-bounded interior pieces") |
+| `bp_jumps_bp_lam25_d<16,20,24,32>.log` | `bp_jumps.py bp_lam25_d<d>.json` | Section 2 Amplitude: within 10% across prime powers at degree 32 (0.128–0.141), within a factor of 1.5 at degree 16; ratio from 0.16–0.23 to 0.13–0.14 |
+| `bp_jumps_bp_lam22_d<16,20,24>.log` | `bp_jumps.py bp_lam22_d<d>.json` | Section 2 Amplitude: within 5–17% at λ = 2.2 |
+| `bp_jumps_bp_lam2_d<8…48>.log` (7 files) | `bp_jumps.py bp_lam2_d<d>.json` (d = 8–20), `bp_jumps.py bp_lam2_d<d>_v2.json` (d = 28, 36, 48) | Section 2 Amplitude: ratio 0.19 → 0.125 over degrees 12–48 at λ = 2 |
+| `bp_zerosum_lam2_d20.log` | `bp_zerosum.py bp_lam2_d20.json --zeros-cache zeros.json` | Section 2 Matrix-free check: 0.992 from 3000 zeros, 0.9995 with fitted t^{−2.07} tail |
+| `lam22_piece_decay.log` | `bp_piece_decay.py bp_lam22_d16.json bp_lam22_d20.json bp_lam22_d24.json` | supporting: Section 2 ("what remains … on the prime-bounded interior pieces") |
 | `endpoint_all.log` | `weil_step1.py --endpoint xi_lam2_N60.json,xi_lam25_N60.json,xi_lam3_N60.json,xi_lam35_N80.json,xi_lam42_N100.json` | supporting: endpoint values of the Fourier eigenvectors |
 
 ## ladders/
 
 | files | command | backs |
 |---|---|---|
-| `tta_fourier_lam<λ>_<N>.log` (23 files; λ = 2, 2.5, 3; N = 10 … 100) | `weil_step1.py --lam <λ> --N <N> --dps <50/60/90> --no-prolate --no-spectrum` | §1: the fast phase ending near N ≈ 30 and 40, the local exponents 0.3–2 (λ = 3: 1.99, 1.88, 0.59), the 1/N extrapolations; `tta_table.md` |
-| `tta_breakpoint_lam<λ>_<d>.log` (25 files; d = 4 … 20, plus 24, 24_x, 28 at λ = 3 and 20_ygl32 at λ = 2.5) | `weil_breakpoints.py --lam <λ> --d <d> --dps <50/60/90> --ygl 24` | Abstract, §2: 0.1% at dimension 26 at λ = 2 (d = 12); §1: quadrature check at degree 20 (`20` vs `20_ygl32`); λ = 3 last ladder step; `tta_table.md` |
+| `tta_fourier_lam<λ>_<N>.log` (23 files; λ = 2, 2.5, 3; N = 10 … 100) | `weil_step1.py --lam <λ> --N <N> --dps <50/60/90> --no-prolate --no-spectrum` | Section 1: the fast phase ending near N ≈ 30 and 40, the local exponents 0.3–2 (λ = 3: 1.99, 1.88, 0.59), the 1/N extrapolations; `tta_table.md` |
+| `tta_breakpoint_lam<λ>_<d>.log` (25 files; d = 4 … 20, plus 24, 24_x, 28 at λ = 3 and 20_ygl32 at λ = 2.5) | `weil_breakpoints.py --lam <λ> --d <d> --dps <50/60/90> --ygl 24` | Abstract, Section 2: 0.1% at dimension 26 at λ = 2 (d = 12); Section 1: quadrature check at degree 20 (`20` vs `20_ygl32`); λ = 3 last ladder step; `tta_table.md` |
 | `tta.csv` | — | wall times of every ladder row |
