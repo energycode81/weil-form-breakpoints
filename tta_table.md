@@ -39,13 +39,13 @@ The λ = 2 "0.1% Fourier" row is a projection from the observed N^(−2.3) tail.
 
 Fourier: at every λ, a fast pre-asymptotic phase followed by an algebraic tail. At λ = 3 the relative error drops 15 orders of magnitude from N = 10 to N = 40 (local exponents 31, 26, 8.9), then 1.99, 1.88, 0.59 on the steps 40→60→80→100 — slow, with an unstable exponent. This is the reconciliation with Groskin's "Sobolev exponent" s(c): a three-point power-law fit over N ∈ {40, 60, 80} measures the transient when the transient has not yet ended at those N, which is the case at his c = 23; at c = λ² = 9 the transient ends near N = 40 and the tail exponent is ≈ 2, not 46.
 
-Breakpoint: below a λ-dependent threshold degree the error is enormous (10^5 at λ = 2, d = 4; 10^14 at λ = 2.5, d = 4), then it drops by 0.3–2.4 orders of magnitude per unit degree. Threshold degree (first d within a factor ~2 of the converged value): 8–10 at λ = 2, 12–16 at λ = 2.5, 20–24 at λ = 3, roughly 2–2.5·λ². Once the prime-position non-smoothness is resolved, the remaining error is the 10⁻³·v non-analytic component described in §6 of the note, and the ladders are reported as data without a rate claim.
+Breakpoint: below a λ-dependent threshold degree the error is enormous (10^5 at λ = 2, d = 4; 10^14 at λ = 2.5, d = 4), then it drops by 0.3–2.4 orders of magnitude per unit degree. Threshold degree (first d within a factor ~2 of the converged value): 8–10 at λ = 2, 12–16 at λ = 2.5, 20–24 at λ = 3, roughly 2–2.5·λ². Once the prime-position non-smoothness is resolved, the remaining error is the 10⁻³·v non-analytic component described in Section 2 of the note, and the ladders are reported as data without a rate claim.
 
 ## Caveats
 
 1. Resolved: λ = 2.5, d = 20 rerun with `--ygl 32` gives 4.74617992974983e-24, identical to the `--ygl 24` value to 15 digits.
 2. The λ = 2.5 breakpoint ladder stalls between d = 10 and d = 12 (factor 4 instead of the ~10³ per two degrees seen elsewhere) before resuming. Unexplained; could be a quadrature or a parity-pairing effect. Worth one look.
-3. The last digits at λ = 2 converge slowly from d = 16 on — the 10⁻³·v non-analytic component at the endpoints and prime positions (§2 of the note), which no polynomial basis resolves spectrally.
+3. The last digits at λ = 2 converge slowly from d = 16 on — the 10⁻³·v non-analytic component at the endpoints and prime positions (Section 2 of the note), which no polynomial basis resolves spectrally.
 
 ## Raw data
 

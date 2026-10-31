@@ -14,7 +14,7 @@ This analysis was produced with the assistance of Anthropic's Claude (Fable 5.1)
 |---|---|
 | `weil_form_breakpoints.md` | the note |
 | `weil_step1.py` | Fourier basis: builds the (2N+1)×(2N+1) matrix, finds ε_N and ξ; options for the spectrum of D_log, the prolate comparison, the explicit-formula zero sum (`--zeros`), endpoint diagnostics (`--endpoint`), and ablation (`--max-prime`, `--no-primes`) |
-| `weil_legendre.py` | Legendre basis (even polynomials on the whole interval, no cuts); the control basis of §2 |
+| `weil_legendre.py` | Legendre basis (even polynomials on the whole interval, no cuts); the control basis of Section 2 of the note |
 | `weil_breakpoints.py` | breakpoint basis: piecewise polynomials with cuts at the prime-power positions; `--extra-breaks` and `--no-breaks` for the displacement controls |
 | `bp_jumps.py`, `bp_zerosum.py`, `bp_piece_decay.py`, `leg_window.py` | diagnostics run on a dumped eigenvector: jump amplitudes at the cuts, the matrix-free zero sum, per-piece coefficient decay, the Legendre residual scan |
 | `check1.py` | one matrix entry (a₀ at λ = 2) recomputed from the definition of the form, independently of the other scripts |
