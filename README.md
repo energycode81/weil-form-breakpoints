@@ -2,7 +2,7 @@
 
 Code, logs and eigenvectors for the note
 
-> J. Echt, *An Improved Computation of the Truncated Weil-form Minimizer: Breakpoints at the Prime-power Positions*, October 2026 (`weil_form_breakpoints.md` in this repository).
+> J. Echt, *An Improved Computation of the Truncated Weil-form Minimizer: Breakpoints at the Prime-power Positions*, November 2026 (`weil_form_breakpoints.md` in this repository).
 
 The note (`weil_form_breakpoints.md`) shows that the Fourier basis used in every published computation of the Connes–Consani–Moscovici truncated Weil form (*Zeta Spectral Triples*, arXiv:2511.22755) does not converge to its lowest eigenvalue ε_λ at any practical size (at dimension 201 it is at least 2.6%, 14% and 27% above the minimum at λ = 2, 2.5 and 3), explains why (the minimizer has corners at y = log p^m and L − log p^m, one pair for each prime power p^m ≤ λ²), and gives a piecewise-polynomial basis with cuts at these corners' positions that, at λ = 2, comes within 0.1% of its dimension-130 value already at dimension 26. Everything in the note can be reproduced from this repository on ordinary hardware.
 
