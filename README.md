@@ -21,6 +21,7 @@ This analysis was produced with the assistance of Anthropic's Claude (Fable 5.1)
 | `logs/` | the output of every run quoted in the note, grouped by what produced it: `fourier/`, `fourier/ablation/`, `breakpoint/`, `breakpoint/controls/`, `legendre/`, `diagnostics/`, `validation/`, `ladders/` |
 | `logs/INDEX.md` | one line per log: the command that produced it and the numbers in the note it backs |
 | `tta_table.md` | time-to-accuracy ladders of the Fourier and breakpoint bases at λ = 2, 2.5, 3 (ε and wall time against matrix size) |
+| `fig_convergence_lam2.png`, `make_figure.py` | Figure 1 of the note (the λ = 2 convergence of both bases) and the script that draws it from the logged values |
 | `dumps/` | the eigenvectors (JSON) that the diagnostics were run on, plus the zeros cache for `bp_zerosum.py` |
 
 ## Running
