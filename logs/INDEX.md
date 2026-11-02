@@ -2,7 +2,7 @@
 
 One line per log file: the command that produced it and what it backs in the note (`weil_form_breakpoints.md`). Section references are to that note: the Abstract, Setting, Section 1 (the Fourier values and Groskin's tables), Section 2 (the corners, the breakpoint basis and its three tests), Section 3 (the Figure 4 comparison), and "What is not claimed". Logs marked *supporting* are runs whose numbers are not quoted in the note but which the quoted numbers were checked against; they are kept so that nothing behind the note is missing.
 
-All runs are `python3 <script> …` with the scripts in the repository root; `tee logs/<path>` captures the output. The eigenvectors that the diagnostics were run on are in `dumps/`. The `[…s]` stamps inside the logs are matrix-assembly time only; wall times for the ladders are in `ladders/tta.csv`.
+All runs are `python3 <script> …` with the scripts in the repository root; `tee logs/<path>` captures the output. The eigenvectors that the diagnostics were run on are in `dumps/`. The `[…s]` stamps inside the logs are matrix-assembly time only; wall times for the ladders are in `ladders/tta.csv` and `tta_table.md`.
 
 Logs are grouped by what produced them, not by when they were run:
 
@@ -102,4 +102,5 @@ Logs are grouped by what produced them, not by when they were run:
 |---|---|---|
 | `tta_fourier_lam<λ>_<N>.log` (23 files; λ = 2, 2.5, 3; N = 10 … 100) | `weil_step1.py --lam <λ> --N <N> --dps <50/60/90> --no-prolate --no-spectrum` | Section 1: the fast phase ending near N ≈ 30 and 40, the local exponents 0.3–2 (λ = 3: 1.99, 1.88, 0.59), the 1/N extrapolations; `tta_table.md` |
 | `tta_breakpoint_lam<λ>_<d>.log` (25 files; d = 4 … 20, plus 24, 24_x, 28 at λ = 3 and 20_ygl32 at λ = 2.5) | `weil_breakpoints.py --lam <λ> --d <d> --dps <50/60/90> --ygl 24` | Abstract, Section 2: 0.1% at dimension 26 at λ = 2 (d = 12); Section 1: quadrature check at degree 20 (`20` vs `20_ygl32`); λ = 3 last ladder step; `tta_table.md` |
-| `tta.csv` | — | wall times of every ladder row |
+| `tta.sh` | — | the script that ran the 43 ladder rows of `tta.csv` (N = 10 … 100; d = 4 … 20 at λ = 2 and 2.5, d = 4 … 16 at λ = 3) and timed each run |
+| `tta.csv` | `tta.sh` | wall times of those 43 rows; the five later ladder runs (`lam2.5_20_ygl32`, `lam3_20`, `lam3_24`, `lam3_24_x`, `lam3_28`) were made individually and their wall times are recorded only in `tta_table.md` |
