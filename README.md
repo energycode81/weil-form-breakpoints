@@ -59,7 +59,7 @@ python3 bp_zerosum.py bp_lam2_d20.json --zeros-cache zeros.json           # logs
 ## Reading the logs
 
 - Each log starts with the parameters of the run (λ, L, N or d, digits, the prime powers used) and, for the Fourier basis, three `[check] W02` lines comparing the pole-term quadrature with the closed form (4.2) of arXiv:2511.22755.
-- The `[…s]` stamps inside a log are matrix-assembly time only. Wall times for the time-to-accuracy ladders are in `logs/ladders/tta.csv`.
+- The `[…s]` stamps inside a log are matrix-assembly time only. Wall times for the time-to-accuracy ladders are in `tta_table.md`; the 43 ladder rows run by `logs/ladders/tta.sh` also have their timer output in `logs/ladders/tta.csv`.
 - Every value printed is a Rayleigh–Ritz upper bound on ε_λ (given exact matrix entries), so the smaller of two values from any two bases is the closer. The exception is `fourier/ablation/`: there the primes are removed or truncated, so the form is no longer the Weil form and its eigenvalues bound nothing about ε_λ.
 - The ladder logs in `logs/ladders/` were produced by an earlier version of the scripts and print `diagonalising` where the current scripts print `diagonalizing`; the numbers are unaffected. The N = 100 Fourier rows and several breakpoint rows were rerun with the current scripts (see `tta_table.md`) and reproduce the ladder values to every printed digit.
 
