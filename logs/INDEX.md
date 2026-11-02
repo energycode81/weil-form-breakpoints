@@ -59,6 +59,7 @@ Logs are grouped by what produced them, not by when they were run:
 | `lam25_correct_d24.log` | same, `--d 24` | Section 1: last ladder step 4·10⁻⁴ (4.7433 → 4.7414) |
 | `lam25_correct_d32_ygl72.log` | `weil_breakpoints.py --lam 2.5 --d 32 --dps 60 --dump …` (default 72-point rule) | Section 1: matrix unchanged to 16 digits under quadrature refinement at degree 32 |
 | `lam25_correct_d20.log` | `weil_breakpoints.py --lam 2.5 --d 20 --dps 60 --ygl 32 --dump bp_lam25_d20.json` | Section 2 Positions: correct-position value 4.7462·10⁻²⁴ |
+| `lam2_d64.log` | `weil_breakpoints.py --lam 2 --d 64 --dps 50 --dump bp_lam2_d64.json` | Section 1: out-of-sample test of the contraction assumption — predicted 7.5183–7.5186·10⁻¹³, run gave 7.51850·10⁻¹³ |
 | `lam22_correct_d12.log`, `_d16`, `_d20` | `weil_breakpoints.py --lam 2.2 --d <d> --dps 60 --ygl 32` | Section 2 Positions: reference ladder 5.73261, 5.72700, 5.72584 ×10⁻¹⁷ |
 | `lam3_d24_plain.log` | `weil_breakpoints.py --lam 3 --d 24 --dps 90 --ygl 32` | Section 2 (second-order test): reference value 2.48829·10⁻³⁸ |
 
@@ -90,7 +91,7 @@ Logs are grouped by what produced them, not by when they were run:
 |---|---|---|
 | `bp_jumps_bp_lam25_d<16,20,24,32>.log` | `bp_jumps.py bp_lam25_d<d>.json` | Section 2 Amplitude: within 10% across prime powers at degree 32 (0.128–0.141), within a factor of 1.5 at degree 16; ratio from 0.16–0.23 to 0.13–0.14 |
 | `bp_jumps_bp_lam22_d<16,20,24>.log` | `bp_jumps.py bp_lam22_d<d>.json` | Section 2 Amplitude: within 5–17% at λ = 2.2 |
-| `bp_jumps_bp_lam2_d<8…48>.log` (7 files) | `bp_jumps.py bp_lam2_d<d>.json` (d = 8–20), `bp_jumps.py bp_lam2_d<d>_v2.json` (d = 28, 36, 48) | Section 2 Amplitude: ratio 0.19 → 0.125 over degrees 12–48 at λ = 2 |
+| `bp_jumps_bp_lam2_d<8…64>.log` (8 files) | `bp_jumps.py bp_lam2_d<d>.json` (d = 8–20, 64), `bp_jumps.py bp_lam2_d<d>_v2.json` (d = 28, 36, 48) | Section 2 Amplitude: ratio 0.19 → 0.119 over degrees 12–64 at λ = 2 |
 | `bp_zerosum_lam2_d20.log` | `bp_zerosum.py bp_lam2_d20.json --zeros-cache zeros.json` | Section 2 Matrix-free check: 0.992 from 3000 zeros, 0.9995 with fitted t^{−2.07} tail |
 | `lam22_piece_decay.log` | `bp_piece_decay.py bp_lam22_d16.json bp_lam22_d20.json bp_lam22_d24.json` | supporting: Section 2 ("what remains … on the prime-bounded interior pieces") |
 | `endpoint_all.log` | `weil_step1.py --endpoint xi_lam2_N60.json,xi_lam25_N60.json,xi_lam3_N60.json,xi_lam35_N80.json,xi_lam42_N100.json` | supporting: endpoint values of the Fourier eigenvectors |
